@@ -4,8 +4,11 @@
   	<meta charset="utf-8">
   	<title>NBME</title>
     <style>
-      p {
+      .Question {
           color: blue;
+        }
+      a {
+          font-size: 20px;
         }
     </style>
   </head>
@@ -19,69 +22,117 @@
     <a href="#Q3">Q3</a>
     <a href="#Q4">Q4</a>
     <a href="#Q5">Q5</a>
+    <a href="#Q5">Q6</a>
+    <a href="#Q1">Q1</a>
+    <a href="#Q2">Q2</a>
+    <a href="#Q3">Q3</a>
+    <a href="#Q4">Q4</a>
+    <a href="#Q5">Q5</a>
+    <a href="#Q5">Q6</a>
+    <a href="#Q1">Q1</a>
+    <a href="#Q2">Q2</a>
+    <a href="#Q3">Q3</a>
+    <a href="#Q4">Q4</a>
+    <a href="#Q5">Q5</a>
+    <a href="#Q5">Q6</a>
+    <a href="#Q1">Q1</a>
+    <a href="#Q2">Q2</a>
+    <a href="#Q3">Q3</a>
+    <a href="#Q4">Q4</a>
+    <a href="#Q5">Q5</a>
+    <a href="#Q5">Q6</a>
 
     <br><br>
-    <div id="Q1" Value="Q1">
-      <p>
+    <div>
+      <p id="Q1" class="Question" Value="Q1">
         Q1. What is your name?
       </p>
-      <input id="1A" TYPE="Radio" Value="1A">Bunny<br>
-      <input id="1B" TYPE="Radio" Value="1B">Satish<br>
-      <input id="1C" TYPE="Radio" Value="1C">Debby<br>
-      <input id="1D" TYPE="Radio" Value="1D">Still Figuring out<br><br>
-      <input id="1E" TYPE="checkbox" Value="1E">Mark Question<br><br>
+      <input id="1A" TYPE="Radio" name="question1" Value="1A">Bunny<br>
+      <input id="1B" TYPE="Radio" name="question1" Value="1B">Satish<br>
+      <input id="1C" TYPE="Radio" name="question1" Value="1C">Debby<br>
+      <input id="1D" TYPE="Radio" name="question1" Value="1D">Still Figuring out<br><br>
+      <button id="1" onclick="myFunction(this)" type="mark" value="Mark">Mark</button>
+      <script>
+        function myFunction(elmnt)
+          {
+            var x = elmnt
+            // window.alert("Q"+y.id);
+            if (x.value == "Mark")
+              {
+                elmnt.style.color = "Purple";
+                elmnt.value = "UnMark";
+                elmnt.innerHTML = "UnMark";
+
+              }
+            else
+              {
+                elmnt.style.color = "black";
+                elmnt.value = "Mark";
+                elmnt.innerHTML = "Mark";
+              };
+          }
+      </script>
     </div>
-    <div id="Q2" Value="Q2">
-      <p>
+    <div>
+      <p id="Q2" class="Question" Value="Q2">
         Q2. What is your age?
       </p>
-      <input id="2A" TYPE="Radio" Value="2A">22<br>
-      <input id="2B" TYPE="Radio" Value="2B">24<br>
-      <input id="2C" TYPE="Radio" Value="2C">26<br>
-      <input id="2D" TYPE="Radio" Value="2D">I'M A GRANDMA<br><br>
-      <input id="2E" TYPE="checkbox" Value="1E">Mark Question<br><br>
+      <input id="2A" TYPE="Radio" name ="question2" Value="2A">22<br>
+      <input id="2B" TYPE="Radio" name ="question2" Value="2B">24<br>
+      <input id="2C" TYPE="Radio" name ="question2" Value="2C">26<br>
+      <input id="2D" TYPE="Radio" name ="question2" Value="2D">I'M A GRANDMA<br><br>
+      <button id="2" onclick="myFunction(this)" type="mark" value="Mark">Mark</button>
     </div>
-    <div id="Q2" Value="Q2">
-      <p>
+    <div>
+      <p id="Q3" class="Question" Value="Q3">
         Q3. What is your age?
       </p>
-      <input id="2A" TYPE="Radio" Value="2A">22<br>
-      <input id="2B" TYPE="Radio" Value="2B">24<br>
-      <input id="2C" TYPE="Radio" Value="2C">26<br>
-      <input id="2D" TYPE="Radio" Value="2D">I'M A GRANDMA<br><br>
-      <input id="1E" TYPE="checkbox" Value="1E">Mark Question<br><br>
+      <input id="2A" TYPE="Radio" name="question3" Value="2A">22<br>
+      <input id="2B" TYPE="Radio" name="question3" Value="2B">24<br>
+      <input id="2C" TYPE="Radio" name="question3" Value="2C">26<br>
+      <input id="2D" TYPE="Radio" name="question3" Value="2D">I'M A GRANDMA<br><br>
+      <button id="3" onclick="myFunction(this)" type="mark" value="Mark">Mark</button>
     </div>
-    <div id="Q3" Value="Q3">
-      <p>
+    <form>
+      <p id="Q4" class="Question" Value="Q4">
         Q4. What is your age?
       </p>
-      <input id="2A" TYPE="Radio" Value="2A">22<br>
-      <input id="2B" TYPE="Radio" Value="2B">24<br>
-      <input id="2C" TYPE="Radio" Value="2C">26<br>
-      <input id="2D" TYPE="Radio" Value="2D">I'M A GRANDMA<br><br>
-      <input id="1E" TYPE="checkbox" Value="1E">Mark Question<br><br>
-    </div>
-    <div id="Q4" Value="Q4">
-      <p>
+      <input id="2A" TYPE="Radio" name="question4" Value="2A">22<br>
+      <input id="2B" TYPE="Radio" name="question4" Value="2B">24<br>
+      <input id="2C" TYPE="Radio" name="question4" Value="2C">26<br>
+      <input id="2D" TYPE="Radio" name="question4" Value="2D">I'M A GRANDMA<br><br>
+      <button id="4" onclick="myFunction(this)" type="mark" value="Mark">Mark</button>
+    </form>
+    <div>
+      <p id="Q5" class="Question" Value="Q5">
         Q5. What is your age?
       </p>
-      <input id="2A" TYPE="Radio" Value="2A">22<br>
-      <input id="2B" TYPE="Radio" Value="2B">24<br>
-      <input id="2C" TYPE="Radio" Value="2C">26<br>
-      <input id="2D" TYPE="Radio" Value="2D">I'M A GRANDMA<br><br>
-      <input id="1E" TYPE="checkbox" Value="1E">Mark Question<br><br>
+      <input id="2A" TYPE="Radio" name="question5" Value="2A">22<br>
+      <input id="2B" TYPE="Radio" name="question5" Value="2B">24<br>
+      <input id="2C" TYPE="Radio" name="question5" Value="2C">26<br>
+      <input id="2D" TYPE="Radio" name="question5" Value="2D">I'M A GRANDMA<br><br>
+      <button id="5" onclick="myFunction(this)" type="mark" value="Mark">Mark</button>
     </div>
-    <div id="Q5" Value="Q5">
-      <p>
+    <div>
+      <p id="Q6" class="Question" Value="Q6">
         Q6. What is your age?
       </p>
-      <input id="2A" TYPE="Radio" Value="2A">22<br>
-      <input id="2B" TYPE="Radio" Value="2B">24<br>
-      <input id="2C" TYPE="Radio" Value="2C">26<br>
-      <input id="2D" TYPE="Radio" Value="2D">I'M A GRANDMA<br><br>
-      <input id="1E" TYPE="checkbox" Value="1E">Mark Question<br><br>
+      <input id="2A" TYPE="Radio" name="questoin6" Value="2A">22<br>
+      <input id="2B" TYPE="Radio" name="questoin6" Value="2B">24<br>
+      <input id="2C" TYPE="Radio" name="questoin6" Value="2C">26<br>
+      <input id="2D" TYPE="Radio" name="questoin6" Value="2D">I'M A GRANDMA<br><br>
+      <button id="6" onclick="myFunction(this)" type="mark" value="Mark">Mark</button>
     </div>
+
+    <a href="#Q1">Q1</a>
+    <a href="#Q2">Q2</a>
+    <a href="#Q3">Q3</a>
+    <a href="#Q4">Q4</a>
+    <a href="#Q5">Q5</a>
+    <br><br>
   </body>
+
+
   <!-- <body bgcolor="black">
     <h1 style="color:#3361FF";>
       Hello Bunny!!
