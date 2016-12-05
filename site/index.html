@@ -136,15 +136,29 @@
         {
           var answers = ["1A", "2A", "3A", "4A", "5A", "6A"]
           var score = 0
+          var correct_answers = ""
           for(i = 0; i < answers.length; i++)
             {
               var id = answers[i]
               if (document.getElementById(id).checked)
-              {
-                score += 1;
-              }
+                {
+                  score += 1;
+                }
+              else
+                {
+                  correct_answers = correct_answers + answers[i] + " "
+                }
+
             }
-          message = "Your score is " + score
+          if (correct_answers == "")
+            {
+              message = "Your score is " + score + "\n You did a great job"
+            }
+          else
+            {
+              message = "Your score is " + score + "\n Correct answers are \n" + correct_answers 
+            }
+          
           window.alert(message);
         }      
     </script>
