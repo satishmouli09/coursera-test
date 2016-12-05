@@ -4,12 +4,18 @@
   	<meta charset="utf-8">
   	<title>NBME</title>
     <style>
-      .Question {
-          color: blue;
+      .Question, #submit {
+          font-size: 20px;
         }
       a {
           color: blue;
           font-size: 20px;
+        }
+      h3 {
+            text-align: center;
+        }
+      .mark {
+                 font-size: 15px; 
         }
     </style>
   </head>
@@ -19,12 +25,12 @@
       All the Best!! I Love you sooo much
     </h1>
     <nav>
-      <a id="Qn1" className="reference" href="#Q1" value="Q1">Q1</a>
-      <a id="Qn2" className="reference" href="#Q2" value="Q2">Q2</a>
-      <a id="Qn3" className="reference" href="#Q3" value="Q3">Q3</a>
-      <a id="Qn4" className="reference" href="#Q4" value="Q4">Q4</a>
-      <a id="Qn5" className="reference" href="#Q5" value="Q5">Q5</a>
-      <a id="Qn6" className="reference" href="#Q6" value="Q6">Q6</a>
+      <a id="Qn1" className="reference" href="#Q1" value="Qn1">Q1</a>
+      <a id="Qn2" className="reference" href="#Q2" value="Qn2">Q2</a>
+      <a id="Qn3" className="reference" href="#Q3" value="Qn3">Q3</a>
+      <a id="Qn4" className="reference" href="#Q4" value="Qn4">Q4</a>
+      <a id="Qn5" className="reference" href="#Q5" value="Qn5">Q5</a>
+      <a id="Qn6" className="reference" href="#Q6" value="Qn6">Q6</a>
     </nav>
 
     <br><br>
@@ -36,7 +42,7 @@
       <input id="1B" TYPE="Radio" name="question1" Value="1B">Satish<br>
       <input id="1C" TYPE="Radio" name="question1" Value="1C">Debby<br>
       <input id="1D" TYPE="Radio" name="question1" Value="1D">Still Figuring out<br><br>
-      <button id="1" onclick="myFunction(this)" type="mark" value="Mark">Mark</button>
+      <button id="1" onclick="myFunction(this)" type="mark" value="Mark" class="mark">Mark</button>
     </div>
     <div>
       <p id="Q2" class="Question" Value="Q2">
@@ -46,69 +52,76 @@
       <input id="2B" TYPE="Radio" name ="question2" Value="2B">24<br>
       <input id="2C" TYPE="Radio" name ="question2" Value="2C">26<br>
       <input id="2D" TYPE="Radio" name ="question2" Value="2D">I'M A GRANDMA<br><br>
-      <button id="2" onclick="myFunction(this)" type="mark" value="Mark">Mark</button>
+      <button id="2" onclick="myFunction(this)" type="mark" value="Mark" class="mark">Mark</button>
     </div>
     <div>
       <p id="Q3" class="Question" Value="Q3">
         Q3. What is your age?
       </p>
-      <input id="2A" TYPE="Radio" name="question3" Value="2A">22<br>
-      <input id="2B" TYPE="Radio" name="question3" Value="2B">24<br>
-      <input id="2C" TYPE="Radio" name="question3" Value="2C">26<br>
-      <input id="2D" TYPE="Radio" name="question3" Value="2D">I'M A GRANDMA<br><br>
-      <button id="3" onclick="myFunction(this)" type="mark" value="Mark">Mark</button>
+      <input id="3A" TYPE="Radio" name="question3" Value="2A">22<br>
+      <input id="3B" TYPE="Radio" name="question3" Value="2B">24<br>
+      <input id="3C" TYPE="Radio" name="question3" Value="2C">26<br>
+      <input id="3D" TYPE="Radio" name="question3" Value="2D">I'M A GRANDMA<br><br>
+      <button id="3" onclick="myFunction(this)" type="mark" value="Mark" class="mark">Mark</button>
     </div>
     <form>
       <p id="Q4" class="Question" Value="Q4">
         Q4. What is your age?
       </p>
-      <input id="2A" TYPE="Radio" name="question4" Value="2A">22<br>
-      <input id="2B" TYPE="Radio" name="question4" Value="2B">24<br>
-      <input id="2C" TYPE="Radio" name="question4" Value="2C">26<br>
-      <input id="2D" TYPE="Radio" name="question4" Value="2D">I'M A GRANDMA<br><br>
-      <button id="4" onclick="myFunction(this)" type="mark" value="Mark">Mark</button>
+      <input id="4A" TYPE="Radio" name="question4" Value="2A">22<br>
+      <input id="4B" TYPE="Radio" name="question4" Value="2B">24<br>
+      <input id="4C" TYPE="Radio" name="question4" Value="2C">26<br>
+      <input id="4D" TYPE="Radio" name="question4" Value="2D">I'M A GRANDMA<br><br>
+      <button id="4" onclick="myFunction(this)" type="mark" value="Mark" class="mark">Mark</button>
     </form>
     <div>
       <p id="Q5" class="Question" Value="Q5">
         Q5. What is your age?
       </p>
-      <input id="2A" TYPE="Radio" name="question5" Value="2A">22<br>
-      <input id="2B" TYPE="Radio" name="question5" Value="2B">24<br>
-      <input id="2C" TYPE="Radio" name="question5" Value="2C">26<br>
-      <input id="2D" TYPE="Radio" name="question5" Value="2D">I'M A GRANDMA<br><br>
-      <button id="5" onclick="myFunction(this)" type="mark" value="Mark">Mark</button>
+      <input id="5A" TYPE="Radio" name="question5" Value="2A">22<br>
+      <input id="5B" TYPE="Radio" name="question5" Value="2B">24<br>
+      <input id="5C" TYPE="Radio" name="question5" Value="2C">26<br>
+      <input id="5D" TYPE="Radio" name="question5" Value="2D">I'M A GRANDMA<br><br>
+      <button id="5" onclick="myFunction(this)" type="mark" value="Mark" class="mark">Mark</button>
     </div>
     <div>
       <p id="Q6" class="Question" Value="Q6">
         Q6. What is your age?
       </p>
-      <input id="2A" TYPE="Radio" name="questoin6" Value="2A">22<br>
-      <input id="2B" TYPE="Radio" name="questoin6" Value="2B">24<br>
-      <input id="2C" TYPE="Radio" name="questoin6" Value="2C">26<br>
-      <input id="2D" TYPE="Radio" name="questoin6" Value="2D">I'M A GRANDMA<br><br>
-      <button id="6" onclick="myFunction(this)" type="mark" value="Mark">Mark</button>
+      <input id="6A" TYPE="Radio" name="questoin6" Value="2A">22<br>
+      <input id="6B" TYPE="Radio" name="questoin6" Value="2B">24<br>
+      <input id="6C" TYPE="Radio" name="questoin6" Value="2C">26<br>
+      <input id="6D" TYPE="Radio" name="questoin6" Value="2D">I'M A GRANDMA<br><br>
+      <button id="6" onclick="myFunction(this)" type="mark" value="Mark" class="mark">Mark</button>
     </div>
 
-    <a href="#Q1">Q1</a>
-    <a href="#Q2">Q2</a>
-    <a href="#Q3">Q3</a>
-    <a href="#Q4">Q4</a>
-    <a href="#Q5">Q5</a>
+    <h3>
+      <button id="submit" onclick="Submit()" type="submit" value="Submit">Submit</button>
+    </h3>
+
+    <nav>
+      <a id="Qnd1" className="reference" href="#Q1" value="Qn1">Q1</a>
+      <a id="Qnd2" className="reference" href="#Q2" value="Qn2">Q2</a>
+      <a id="Qnd3" className="reference" href="#Q3" value="Qn3">Q3</a>
+      <a id="Qnd4" className="reference" href="#Q4" value="Qn4">Q4</a>
+      <a id="Qnd5" className="reference" href="#Q5" value="Qn5">Q5</a>
+      <a id="Qnd6" className="reference" href="#Q6" value="Qn6">Q6</a>
+    </nav>
     <br><br>
 
     <script>
       function myFunction(elmnt)
         {
-          var x = elmnt
-          var id = "Qn" + elmnt.id
-          // window.alert("Q"+x.id);
-          // window.alert(y)
+          var x = elmnt;
+          var id = "Qn" + elmnt.id;
+          var id2 = "Qnd" + elmnt.id;
           if (x.value == "Mark")
             {
               elmnt.style.color = "Purple";
               elmnt.value = "UnMark";
               elmnt.innerHTML = "UnMark";
               document.getElementById(id).style.color = "red";
+              document.getElementById(id2).style.color = "red";
             }
           else
             {
@@ -116,18 +129,24 @@
               elmnt.value = "Mark";
               elmnt.innerHTML = "Mark";
               document.getElementById(id).style.color = "blue";
+              document.getElementById(id2).style.color = "blue";
             };
         }
-      </script>
+      function Submit()
+        {
+          var answers = ["1A", "2A", "3A", "4A", "5A", "6A"]
+          var score = 0
+          for(i = 0; i < answers.length; i++)
+            {
+              var id = answers[i]
+              if (document.getElementById(id).checked)
+              {
+                score += 1;
+              }
+            }
+          message = "Your score is " + score
+          window.alert(message);
+        }      
+    </script>
   </body>
-
-
-  <!-- <body bgcolor="black">
-    <h1 style="color:#3361FF";>
-      Hello Bunny!!
-    </h1>
-    <h2 style="color:#FF33EC";>
-      I Love you sooo much
-    </h2>
-  </body> -->
 </html>
