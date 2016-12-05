@@ -8,39 +8,24 @@
           color: blue;
         }
       a {
+          color: blue;
           font-size: 20px;
         }
     </style>
   </head>
 
   <body>
-    <h1 style="color:#3361FF";>
+    <h1 style="color:#FF33F3";>
       All the Best!! I Love you sooo much
     </h1>
-    <a href="#Q1">Q1</a>
-    <a href="#Q2">Q2</a>
-    <a href="#Q3">Q3</a>
-    <a href="#Q4">Q4</a>
-    <a href="#Q5">Q5</a>
-    <a href="#Q5">Q6</a>
-    <a href="#Q1">Q1</a>
-    <a href="#Q2">Q2</a>
-    <a href="#Q3">Q3</a>
-    <a href="#Q4">Q4</a>
-    <a href="#Q5">Q5</a>
-    <a href="#Q5">Q6</a>
-    <a href="#Q1">Q1</a>
-    <a href="#Q2">Q2</a>
-    <a href="#Q3">Q3</a>
-    <a href="#Q4">Q4</a>
-    <a href="#Q5">Q5</a>
-    <a href="#Q5">Q6</a>
-    <a href="#Q1">Q1</a>
-    <a href="#Q2">Q2</a>
-    <a href="#Q3">Q3</a>
-    <a href="#Q4">Q4</a>
-    <a href="#Q5">Q5</a>
-    <a href="#Q5">Q6</a>
+    <nav>
+      <a id="Qn1" className="reference" href="#Q1" value="Q1">Q1</a>
+      <a id="Qn2" className="reference" href="#Q2" value="Q2">Q2</a>
+      <a id="Qn3" className="reference" href="#Q3" value="Q3">Q3</a>
+      <a id="Qn4" className="reference" href="#Q4" value="Q4">Q4</a>
+      <a id="Qn5" className="reference" href="#Q5" value="Q5">Q5</a>
+      <a id="Qn6" className="reference" href="#Q6" value="Q6">Q6</a>
+    </nav>
 
     <br><br>
     <div>
@@ -52,26 +37,6 @@
       <input id="1C" TYPE="Radio" name="question1" Value="1C">Debby<br>
       <input id="1D" TYPE="Radio" name="question1" Value="1D">Still Figuring out<br><br>
       <button id="1" onclick="myFunction(this)" type="mark" value="Mark">Mark</button>
-      <script>
-        function myFunction(elmnt)
-          {
-            var x = elmnt
-            // window.alert("Q"+y.id);
-            if (x.value == "Mark")
-              {
-                elmnt.style.color = "Purple";
-                elmnt.value = "UnMark";
-                elmnt.innerHTML = "UnMark";
-
-              }
-            else
-              {
-                elmnt.style.color = "black";
-                elmnt.value = "Mark";
-                elmnt.innerHTML = "Mark";
-              };
-          }
-      </script>
     </div>
     <div>
       <p id="Q2" class="Question" Value="Q2">
@@ -130,6 +95,30 @@
     <a href="#Q4">Q4</a>
     <a href="#Q5">Q5</a>
     <br><br>
+
+    <script>
+      function myFunction(elmnt)
+        {
+          var x = elmnt
+          var id = "Qn" + elmnt.id
+          // window.alert("Q"+x.id);
+          // window.alert(y)
+          if (x.value == "Mark")
+            {
+              elmnt.style.color = "Purple";
+              elmnt.value = "UnMark";
+              elmnt.innerHTML = "UnMark";
+              document.getElementById(id).style.color = "red";
+            }
+          else
+            {
+              elmnt.style.color = "black";
+              elmnt.value = "Mark";
+              elmnt.innerHTML = "Mark";
+              document.getElementById(id).style.color = "blue";
+            };
+        }
+      </script>
   </body>
 
 
