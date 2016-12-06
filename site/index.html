@@ -4,14 +4,29 @@
   	<meta charset="utf-8">
   	<title>NBME</title>
     <style>
+      div.start{
+            background-color: #DAF7A6;
+        }
+      div.block1{
+            background-color: lightblue;
+        }
+      div.block2 {
+            background-color: lightgreen;
+        }
       .Question, #submit {
           font-size: 20px;
+        }
+      img {
+          align: right;
         }
       a {
           color: blue;
           font-size: 20px;
         }
-      h3 {
+      option {
+              color: #FF33D1;
+        }
+      h3, h1{
             text-align: center;
         }
       .mark {
@@ -21,9 +36,985 @@
   </head>
 
   <body>
-    <h1 style="color:#FF33F3";>
-      All the Best!! I Love you sooo much
+    <div class="start">
+    <h1 style="color:#CE33FF";>
+      NBME 12
     </h1>
+    <div>
+      <p id="name">
+        Please select your name
+      </p>
+      <select>
+        <option value="Bunny">Bunny</option>
+        <option value="Cutie Pie">Cutie Pie</option>
+        <option value="Bhavani">Bhavani</option>
+      </select>
+    </div>
+    <br>
+    <div>
+      <p id="gender">
+        Please select your Gender
+      </p>
+      <input id="male" TYPE="Radio" Name="Gender" Value="Male">Male
+      <!-- <input id="female" TYPE="Radio" Name="Gender" Value="Female">Female -->
+      <input id="lesbian" TYPE="Radio" Name="Gender" Value="Lesbian">Lesbian
+      <input id="gay" TYPE="Radio" Name="Gender" Value="Gay">Gay
+      <input id="bisexual" TYPE="Radio" Name="Gender" Value="Female">BiSexual
+    </div>
+    <br><br>
+    <nav>
+      <a id="block1" class="Blocks" href="#Block1" value="block1">Block 1</a><br><br>
+      <a id="block2" class="Blocks" href="#Block2" value="block2">Block 2</a><br><br>
+      <a id="block3" class="Blocks" href="#Block3" value="block3">Block 3</a><br><br>
+      <a id="block4" class="Blocks" href="#Block4" value="block4">Block 4</a><br><br>
+    </nav>
+    <br><br>
+  </div>
+
+    <div class="block1">
+    <h1 id="Block1">BLOCK 1</h1>
+    <br>
+    <nav class="QuestionNavigation">
+      <a id="Qn1" className="reference" href="#Q1" value="Qn1">Q-01</a>
+      <a id="Qn2" className="reference" href="#Q2" value="Qn2">Q-02</a>
+      <a id="Qn3" className="reference" href="#Q3" value="Qn3">Q-03</a>
+      <a id="Qn4" className="reference" href="#Q4" value="Qn4">Q-04</a>
+      <a id="Qn5" className="reference" href="#Q5" value="Qn5">Q-05</a>
+      <a id="Qn6" className="reference" href="#Q6" value="Qn6">Q-06</a>
+      <a id="Qn7" className="reference" href="#Q7" value="Qn7">Q-07</a>
+      <a id="Qn8" className="reference" href="#Q8" value="Qn8">Q-08</a>
+      <a id="Qn9" className="reference" href="#Q9" value="Qn9">Q-09</a>
+      <a id="Qn10" className="reference" href="#Q10" value="Qn10">Q-10</a><br><br>
+      <a id="Qn11" className="reference" href="#Q11" value="Qn11">Q-11</a>
+      <a id="Qn12" className="reference" href="#Q12" value="Qn12">Q-12</a>
+      <a id="Qn13" className="reference" href="#Q13" value="Qn13">Q-13</a>
+      <a id="Qn14" className="reference" href="#Q14" value="Qn14">Q-14</a>
+      <a id="Qn15" className="reference" href="#Q15" value="Qn15">Q-15</a>
+      <a id="Qn16" className="reference" href="#Q16" value="Qn16">Q-16</a>
+      <a id="Qn17" className="reference" href="#Q17" value="Qn17">Q-17</a>
+      <a id="Qn18" className="reference" href="#Q18" value="Qn18">Q-18</a>
+      <a id="Qn19" className="reference" href="#Q19" value="Qn19">Q-19</a>
+      <a id="Qn20" className="reference" href="#Q20" value="Qn20">Q-20</a><br><br>
+      <a id="Qn21" className="reference" href="#Q21" value="Qn21">Q-21</a>
+      <a id="Qn22" className="reference" href="#Q22" value="Qn22">Q-22</a>
+      <a id="Qn23" className="reference" href="#Q23" value="Qn23">Q-23</a>
+      <a id="Qn24" className="reference" href="#Q24" value="Qn24">Q-24</a>
+      <a id="Qn25" className="reference" href="#Q25" value="Qn25">Q-25</a>
+      <a id="Qn26" className="reference" href="#Q26" value="Qn26">Q-26</a>
+      <a id="Qn27" className="reference" href="#Q27" value="Qn27">Q-27</a>
+      <a id="Qn28" className="reference" href="#Q28" value="Qn28">Q-28</a>
+      <a id="Qn29" className="reference" href="#Q29" value="Qn29">Q-29</a>
+      <a id="Qn30" className="reference" href="#Q30" value="Qn30">Q-30</a><br><br>
+      <a id="Qn31" className="reference" href="#Q31" value="Qn31">Q-31</a>
+      <a id="Qn32" className="reference" href="#Q32" value="Qn32">Q-32</a>
+      <a id="Qn33" className="reference" href="#Q33" value="Qn33">Q-33</a>
+      <a id="Qn34" className="reference" href="#Q34" value="Qn34">Q-34</a>
+      <a id="Qn35" className="reference" href="#Q35" value="Qn35">Q-35</a>
+      <a id="Qn36" className="reference" href="#Q36" value="Qn36">Q-36</a>
+      <a id="Qn37" className="reference" href="#Q37" value="Qn37">Q-37</a>
+      <a id="Qn38" className="reference" href="#Q38" value="Qn38">Q-38</a>
+      <a id="Qn39" className="reference" href="#Q39" value="Qn39">Q-39</a>
+      <a id="Qn40" className="reference" href="#Q40" value="Qn40">Q-40</a><br><br>
+      <a id="Qn41" className="reference" href="#Q41" value="Qn41">Q-41</a>
+      <a id="Qn42" className="reference" href="#Q42" value="Qn42">Q-42</a>
+      <a id="Qn43" className="reference" href="#Q43" value="Qn43">Q-43</a>
+      <a id="Qn44" className="reference" href="#Q44" value="Qn44">Q-44</a>
+      <a id="Qn45" className="reference" href="#Q45" value="Qn45">Q-45</a>
+      <a id="Qn46" className="reference" href="#Q46" value="Qn46">Q-46</a>
+      <a id="Qn47" className="reference" href="#Q47" value="Qn47">Q-47</a>
+      <a id="Qn48" className="reference" href="#Q48" value="Qn48">Q-48</a>
+      <a id="Qn49" className="reference" href="#Q49" value="Qn49">Q-49</a>
+      <a id="Qn50" className="reference" href="#Q50" value="Qn50">Q-50</a>
+    </nav>
+    <br><br><br><br>
+    <br><br><br><br>
+    
+    <div>
+      <img id="Q1" src="questions/block1/1_1.jpg" alt="1_1" style="width:1300px;height:300px;"><br>
+      <input id="1A" TYPE="Radio" name="question1" Value="1A">A<br>
+      <input id="1B" TYPE="Radio" name="question1" Value="1B">B<br>
+      <input id="1C" TYPE="Radio" name="question1" Value="1C">C<br>
+      <input id="1D" TYPE="Radio" name="question1" Value="1D">D<br>
+      <input id="1E" TYPE="Radio" name="question1" Value="1E">E<br>
+      <p>
+        <button id="1" onclick="Mark(this)" type="mark" value="Mark" class="mark">Mark</button>
+      </p>
+      <p>
+        <a href="#Block1">Block 1 questions list</a>
+      </p>
+    </div>
+    <br><br>
+
+    <div>
+      <img id="Q2" src="questions/block1/1_2.jpg" alt="1_1" style="width:1300px;height:250px;"><br>
+      <input id="2A" TYPE="Radio" name="question2" Value="2A">A<br>
+      <input id="2B" TYPE="Radio" name="question2" Value="2B">B<br>
+      <input id="2C" TYPE="Radio" name="question2" Value="2C">C<br>
+      <input id="2D" TYPE="Radio" name="question2" Value="2D">D<br>
+      <input id="2E" TYPE="Radio" name="question2" Value="2E">E<br>
+      <p>
+        <button id="2" onclick="Mark(this)" type="mark" value="Mark" class="mark">Mark</button>
+      </p>
+      <p>
+        <a href="#Block1">Block 1 questions list</a>
+      </p>
+    </div>
+    <br><br>
+
+    <div>
+      <img id="Q3" src="questions/block1/1_3.jpg" alt="1_3" style="width:1300px;height:300px;"><br>
+      <input id="3A" TYPE="Radio" name="question3" Value="3A">A<br>
+      <input id="3B" TYPE="Radio" name="question3" Value="3B">B<br>
+      <input id="3C" TYPE="Radio" name="question3" Value="3C">C<br>
+      <input id="3D" TYPE="Radio" name="question3" Value="3D">D<br>
+      <input id="3E" TYPE="Radio" name="question3" Value="3E">E<br>
+      <input id="3F" TYPE="Radio" name="question3" Value="3F">F<br>
+      <p>
+        <button id="3" onclick="Mark(this)" type="mark" value="Mark" class="mark">Mark</button>
+      </p>
+      <p>
+        <a href="#Block1">Block 1 questions list</a>
+      </p>
+    </div>
+    <br><br>
+
+    <div>
+      <img id="Q4" src="questions/block1/1_4.jpg" alt="1_4" style="width:1300px;height:300px;"><br>
+      <input id="4A" TYPE="Radio" name="question4" Value="4A">A<br>
+      <input id="4B" TYPE="Radio" name="question4" Value="4B">B<br>
+      <input id="4C" TYPE="Radio" name="question4" Value="4C">C<br>
+      <input id="4D" TYPE="Radio" name="question4" Value="4D">D<br>
+      <input id="4E" TYPE="Radio" name="question4" Value="4E">E<br>
+      <p>
+        <button id="4" onclick="Mark(this)" type="mark" value="Mark" class="mark">Mark</button>
+      </p>
+      <p>
+        <a href="#Block1">Block 1 questions list</a>
+      </p>
+    </div>
+    <br><br>
+
+    <div>
+      <img id="Q5" src="questions/block1/1_5.jpg" alt="1_5" style="width:1300px;height:300px;"><br>
+      <input id="5A" TYPE="Radio" name="question5" Value="5A">A<br>
+      <input id="5B" TYPE="Radio" name="question5" Value="5B">B<br>
+      <input id="5C" TYPE="Radio" name="question5" Value="5C">C<br>
+      <input id="5D" TYPE="Radio" name="question5" Value="5D">D<br>
+      <input id="5E" TYPE="Radio" name="question5" Value="5E">E<br>
+      <input id="5F" TYPE="Radio" name="question5" Value="5F">F<br>
+      <input id="5G" TYPE="Radio" name="question5" Value="5G">G<br>
+      <p>
+        <button id="5" onclick="Mark(this)" type="mark" value="Mark" class="mark">Mark</button>
+      </p>
+      <p>
+        <a href="#Block1">Block 1 questions list</a>
+      </p>
+    </div>
+    <br><br>
+
+    <div>
+      <img id="Q6" src="questions/block1/1_6.jpg" alt="1_6" style="width:1300px;height:300px;"><br>
+      <input id="6A" TYPE="Radio" name="question6" Value="6A">A<br>
+      <input id="6B" TYPE="Radio" name="question6" Value="6B">B<br>
+      <input id="6C" TYPE="Radio" name="question6" Value="6C">C<br>
+      <input id="6D" TYPE="Radio" name="question6" Value="6D">D<br>
+      <input id="6E" TYPE="Radio" name="question6" Value="6E">E<br>
+      <p>
+        <button id="6" onclick="Mark(this)" type="mark" value="Mark" class="mark">Mark</button>
+      </p>
+      <p>
+        <a href="#Block1">Block 1 questions list</a>
+      </p>
+    </div>
+    <br><br>
+
+    <div>
+      <img id="Q7" src="questions/block1/1_7.jpg" alt="1_7" style="width:1300px;height:300px;"><br>
+      <input id="7A" TYPE="Radio" name="question7" Value="7A">A<br>
+      <input id="7B" TYPE="Radio" name="question7" Value="7B">B<br>
+      <input id="7C" TYPE="Radio" name="question7" Value="7C">C<br>
+      <input id="7D" TYPE="Radio" name="question7" Value="7D">D<br>
+      <input id="7E" TYPE="Radio" name="question7" Value="7E">E<br>
+      <p>
+        <button id="7" onclick="Mark(this)" type="mark" value="Mark" class="mark">Mark</button>
+      </p>
+      <p>
+        <a href="#Block1">Block 1 questions list</a>
+      </p>
+    </div>
+    <br><br>
+
+    <div>
+      <img id="Q8" src="questions/block1/1_8.jpg" alt="1_8" style="width:1300px;height:300px;"><br>
+      <input id="8A" TYPE="Radio" name="question8" Value="8A">A<br>
+      <input id="8B" TYPE="Radio" name="question8" Value="8B">B<br>
+      <input id="8C" TYPE="Radio" name="question8" Value="8C">C<br>
+      <input id="8D" TYPE="Radio" name="question8" Value="8D">D<br>
+      <input id="8E" TYPE="Radio" name="question8" Value="8E">E<br>
+      <p>
+        <button id="8" onclick="Mark(this)" type="mark" value="Mark" class="mark">Mark</button>
+      </p>
+      <p>
+        <a href="#Block1">Block 1 questions list</a>
+      </p>
+    </div>
+    <br><br>
+
+    <div>
+      <img id="Q9" src="questions/block1/1_9.jpg" alt="1_9" style="width:1300px;height:300px;"><br>
+      <input id="9A" TYPE="Radio" name="question9" Value="9A">A<br>
+      <input id="9B" TYPE="Radio" name="question9" Value="9B">B<br>
+      <input id="9C" TYPE="Radio" name="question9" Value="9C">C<br>
+      <input id="9D" TYPE="Radio" name="question9" Value="9D">D<br>
+      <input id="9E" TYPE="Radio" name="question9" Value="9E">E<br>
+      <p>
+        <button id="9" onclick="Mark(this)" type="mark" value="Mark" class="mark">Mark</button>
+      </p>
+      <p>
+        <a href="#Block1">Block 1 questions list</a>
+      </p>
+    </div>
+    <br><br>
+
+    <div>
+      <img id="Q10" src="questions/block1/1_10.jpg" alt="1_10" style="width:1300px;height:450px;"><br>
+      <input id="10A" TYPE="Radio" name="question10" Value="10A">A<br>
+      <input id="10B" TYPE="Radio" name="question10" Value="10B">B<br>
+      <input id="10C" TYPE="Radio" name="question10" Value="10C">C<br>
+      <input id="10D" TYPE="Radio" name="question10" Value="10D">D<br>
+      <input id="10E" TYPE="Radio" name="question10" Value="10E">E<br>
+      <input id="10F" TYPE="Radio" name="question10" Value="10F">F<br>
+      <p>
+        <button id="10" onclick="Mark(this)" type="mark" value="Mark" class="mark">Mark</button>
+      </p>
+      <p>
+        <a href="#Block1">Block 1 questions list</a>
+      </p>
+    </div>
+    <br><br>
+
+    <div>
+      <img id="Q11" src="questions/block1/1_11.jpg" alt="1_11" style="width:1300px;height:300px;"><br>
+      <input id="11A" TYPE="Radio" name="question11" Value="11A">A<br>
+      <input id="11B" TYPE="Radio" name="question11" Value="11B">B<br>
+      <input id="11C" TYPE="Radio" name="question11" Value="11C">C<br>
+      <input id="11D" TYPE="Radio" name="question11" Value="11D">D<br>
+      <input id="11E" TYPE="Radio" name="question11" Value="11E">E<br>
+      <input id="11F" TYPE="Radio" name="question11" Value="11F">F<br>
+      <p>
+        <button id="11" onclick="Mark(this)" type="mark" value="Mark" class="mark">Mark</button>
+      </p>
+      <p>
+        <a href="#Block1">Block 1 questions list</a>
+      </p>
+    </div>
+    <br><br>
+
+    <div>
+      <img id="Q12" src="questions/block1/1_12.jpg" alt="1_12" style="width:1300px;height:500px;"><br>
+      <input id="12A" TYPE="Radio" name="question12" Value="12A">A<br>
+      <input id="12B" TYPE="Radio" name="question12" Value="12B">B<br>
+      <input id="12C" TYPE="Radio" name="question12" Value="12C">C<br>
+      <input id="12D" TYPE="Radio" name="question12" Value="12D">D<br>
+      <p>
+        <button id="12" onclick="Mark(this)" type="mark" value="Mark" class="mark">Mark</button>
+      </p>
+      <p>
+        <a href="#Block1">Block 1 questions list</a>
+      </p>
+    </div>
+    <br><br>
+
+    <div>
+      <img id="Q13" src="questions/block1/1_13.jpg" alt="1_13" style="width:1300px;height:300px;"><br>
+      <input id="13A" TYPE="Radio" name="question13" Value="13A">A<br>
+      <input id="13B" TYPE="Radio" name="question13" Value="13B">B<br>
+      <input id="13C" TYPE="Radio" name="question13" Value="13C">C<br>
+      <input id="13D" TYPE="Radio" name="question13" Value="13D">D<br>
+      <input id="13E" TYPE="Radio" name="question13" Value="13E">E<br>
+      <p>
+        <button id="13" onclick="Mark(this)" type="mark" value="Mark" class="mark">Mark</button>
+      </p>
+      <p>
+        <a href="#Block1">Block 1 questions list</a>
+      </p>
+    </div>
+    <br><br>
+
+    <div>
+      <img id="Q14" src="questions/block1/1_14.jpg" alt="1_14" style="width:1300px;height:400px;"><br>
+      <input id="14A" TYPE="Radio" name="question14" Value="14A">A<br>
+      <input id="14B" TYPE="Radio" name="question14" Value="14B">B<br>
+      <input id="14C" TYPE="Radio" name="question14" Value="14C">C<br>
+      <input id="14D" TYPE="Radio" name="question14" Value="14D">D<br>
+      <input id="14E" TYPE="Radio" name="question14" Value="14E">E<br>
+      <input id="14F" TYPE="Radio" name="question14" Value="14F">F<br>
+      <input id="14G" TYPE="Radio" name="question14" Value="14G">G<br>
+      <input id="14H" TYPE="Radio" name="question14" Value="14H">H<br>
+      <input id="14I" TYPE="Radio" name="question14" Value="14I">I<br>
+      <p>
+        <button id="14" onclick="Mark(this)" type="mark" value="Mark" class="mark">Mark</button>
+      </p>
+      <p>
+        <a href="#Block1">Block 1 questions list</a>
+      </p>
+    </div>
+    <br><br>
+
+    <div>
+      <img id="Q15" src="questions/block1/1_15.jpg" alt="1_15" style="width:1300px;height:300px;"><br>
+      <input id="15A" TYPE="Radio" name="question15" Value="15A">A<br>
+      <input id="15B" TYPE="Radio" name="question15" Value="15B">B<br>
+      <input id="15C" TYPE="Radio" name="question15" Value="15C">C<br>
+      <input id="15D" TYPE="Radio" name="question15" Value="15D">D<br>
+      <input id="15E" TYPE="Radio" name="question15" Value="15E">E<br>
+      <input id="15F" TYPE="Radio" name="question15" Value="15F">F<br>
+      <p>
+        <button id="15" onclick="Mark(this)" type="mark" value="Mark" class="mark">Mark</button>
+      </p>
+      <p>
+        <a href="#Block1">Block 1 questions list</a>
+      </p>
+    </div>
+    <br><br>
+
+    <div>
+      <img id="Q16" src="questions/block1/1_16.jpg" alt="1_16" style="width:1300px;height:300px;"><br>
+      <input id="16A" TYPE="Radio" name="question16" Value="16A">A<br>
+      <input id="16B" TYPE="Radio" name="question16" Value="16B">B<br>
+      <input id="16C" TYPE="Radio" name="question16" Value="16C">C<br>
+      <input id="16D" TYPE="Radio" name="question16" Value="16D">D<br>
+      <input id="16E" TYPE="Radio" name="question16" Value="16E">E<br>
+      <p>
+        <button id="16" onclick="Mark(this)" type="mark" value="Mark" class="mark">Mark</button>
+      </p>
+      <p>
+        <a href="#Block1">Block 1 questions list</a>
+      </p>
+    </div>
+    <br><br>
+
+    <div>
+      <img id="Q17" src="questions/block1/1_17.jpg" alt="1_17" style="width:1300px;height:300px;"><br>
+      <input id="17A" TYPE="Radio" name="question17" Value="17A">A<br>
+      <input id="17B" TYPE="Radio" name="question17" Value="17B">B<br>
+      <input id="17C" TYPE="Radio" name="question17" Value="17C">C<br>
+      <input id="17D" TYPE="Radio" name="question17" Value="17D">D<br>
+      <input id="17E" TYPE="Radio" name="question17" Value="17E">E<br>
+      <p>
+        <button id="17" onclick="Mark(this)" type="mark" value="Mark" class="mark">Mark</button>
+      </p>
+      <p>
+        <a href="#Block1">Block 1 questions list</a>
+      </p>
+    </div>
+    <br><br>
+
+    <div>
+      <img id="Q18" src="questions/block1/1_18.jpg" alt="1_18" style="width:1300px;height:300px;"><br>
+      <input id="18A" TYPE="Radio" name="question18" Value="18A">A<br>
+      <input id="18B" TYPE="Radio" name="question18" Value="18B">B<br>
+      <input id="18C" TYPE="Radio" name="question18" Value="18C">C<br>
+      <input id="18D" TYPE="Radio" name="question18" Value="18D">D<br>
+      <input id="18E" TYPE="Radio" name="question18" Value="18E">E<br>
+      <p>
+        <button id="18" onclick="Mark(this)" type="mark" value="Mark" class="mark">Mark</button>
+      </p>
+      <p>
+        <a href="#Block1">Block 1 questions list</a>
+      </p>
+    </div>
+    <br><br>
+
+    <div>
+      <img id="Q19" src="questions/block1/1_19.jpg" alt="1_19" style="width:1300px;height:300px;"><br>
+      <input id="19A" TYPE="Radio" name="question19" Value="19A">A<br>
+      <input id="19B" TYPE="Radio" name="question19" Value="19B">B<br>
+      <input id="19C" TYPE="Radio" name="question19" Value="19C">C<br>
+      <input id="19D" TYPE="Radio" name="question19" Value="19D">D<br>
+      <input id="19E" TYPE="Radio" name="question19" Value="19E">E<br>
+      <p>
+        <button id="19" onclick="Mark(this)" type="mark" value="Mark" class="mark">Mark</button>
+      </p>
+      <p>
+        <a href="#Block1">Block 1 questions list</a>
+      </p>
+    </div>
+    <br><br>
+
+    <div>
+      <img id="Q20" src="questions/block1/1_20.jpg" alt="1_20" style="width:1300px;height:350px;"><br>
+      <input id="20A" TYPE="Radio" name="question20" Value="20A">A<br>
+      <input id="20B" TYPE="Radio" name="question20" Value="20B">B<br>
+      <input id="20C" TYPE="Radio" name="question20" Value="20C">C<br>
+      <input id="20D" TYPE="Radio" name="question20" Value="20D">D<br>
+      <input id="20E" TYPE="Radio" name="question20" Value="20E">E<br>
+      <p>
+        <button id="20" onclick="Mark(this)" type="mark" value="Mark" class="mark">Mark</button>
+      </p>
+      <p>
+        <a href="#Block1">Block 1 questions list</a>
+      </p>
+    </div>
+    <br><br>
+
+    <div>
+      <img id="Q21" src="questions/block1/1_21.jpg" alt="1_21" style="width:1300px;height:300px;"><br>
+      <input id="21A" TYPE="Radio" name="question21" Value="21A">A<br>
+      <input id="21B" TYPE="Radio" name="question21" Value="21B">B<br>
+      <input id="21C" TYPE="Radio" name="question21" Value="21C">C<br>
+      <input id="21D" TYPE="Radio" name="question21" Value="21D">D<br>
+      <input id="21E" TYPE="Radio" name="question21" Value="21E">E<br>
+      <p>
+        <button id="21" onclick="Mark(this)" type="mark" value="Mark" class="mark">Mark</button>
+      </p>
+      <p>
+        <a href="#Block1">Block 1 questions list</a>
+      </p>
+    </div>
+    <br><br>
+
+    <div>
+      <img id="Q22" src="questions/block1/1_22.jpg" alt="1_22" style="width:1300px;height:300px;"><br>
+      <input id="22A" TYPE="Radio" name="question22" Value="22A">A<br>
+      <input id="22B" TYPE="Radio" name="question22" Value="22B">B<br>
+      <input id="22C" TYPE="Radio" name="question22" Value="22C">C<br>
+      <input id="22D" TYPE="Radio" name="question22" Value="22D">D<br>
+      <input id="22E" TYPE="Radio" name="question22" Value="22E">E<br>
+      <p>
+        <button id="22" onclick="Mark(this)" type="mark" value="Mark" class="mark">Mark</button>
+      </p>
+      <p>
+        <a href="#Block1">Block 1 questions list</a>
+      </p>
+    </div>
+    <br><br>
+
+    <div>
+      <img id="Q23" src="questions/block1/1_23.jpg" alt="1_23" style="width:1300px;height:300px;"><br>
+      <input id="23A" TYPE="Radio" name="question23" Value="23A">A<br>
+      <input id="23B" TYPE="Radio" name="question23" Value="23B">B<br>
+      <input id="23C" TYPE="Radio" name="question23" Value="23C">C<br>
+      <input id="23D" TYPE="Radio" name="question23" Value="23D">D<br>
+      <input id="23E" TYPE="Radio" name="question23" Value="23E">E<br>
+      <p>
+        <button id="23" onclick="Mark(this)" type="mark" value="Mark" class="mark">Mark</button>
+      </p>
+      <p>
+        <a href="#Block1">Block 1 questions list</a>
+      </p>
+    </div>
+    <br><br>
+
+    <div>
+      <img id="Q24" src="questions/block1/1_24.jpg" alt="1_24" style="width:1300px;height:300px;"><br>
+      <input id="24A" TYPE="Radio" name="question24" Value="24A">A<br>
+      <input id="24B" TYPE="Radio" name="question24" Value="24B">B<br>
+      <input id="24C" TYPE="Radio" name="question24" Value="24C">C<br>
+      <input id="24D" TYPE="Radio" name="question24" Value="24D">D<br>
+      <input id="24E" TYPE="Radio" name="question24" Value="24E">E<br>
+      <p>
+        <button id="24" onclick="Mark(this)" type="mark" value="Mark" class="mark">Mark</button>
+      </p>
+      <p>
+        <a href="#Block1">Block 1 questions list</a>
+      </p>
+    </div>
+    <br><br>
+
+    <div>
+      <img id="Q25" src="questions/block1/1_25.jpg" alt="1_25" style="width:1300px;height:300px;"><br>
+      <input id="25A" TYPE="Radio" name="question25" Value="25A">A<br>
+      <input id="25B" TYPE="Radio" name="question25" Value="25B">B<br>
+      <input id="25C" TYPE="Radio" name="question25" Value="25C">C<br>
+      <input id="25D" TYPE="Radio" name="question25" Value="25D">D<br>
+      <input id="25E" TYPE="Radio" name="question25" Value="25E">E<br>
+      <p>
+        <button id="25" onclick="Mark(this)" type="mark" value="Mark" class="mark">Mark</button>
+      </p>
+      <p>
+        <a href="#Block1">Block 1 questions list</a>
+      </p>
+    </div>
+    <br><br>
+
+    <div>
+      <img id="Q26" src="questions/block1/1_26.jpg" alt="1_26" style="width:1300px;height:250px;"><br>
+      <input id="26A" TYPE="Radio" name="question26" Value="26A">A<br>
+      <input id="26B" TYPE="Radio" name="question26" Value="26B">B<br>
+      <input id="26C" TYPE="Radio" name="question26" Value="26C">C<br>
+      <input id="26D" TYPE="Radio" name="question26" Value="26D">D<br>
+      <p>
+        <button id="26" onclick="Mark(this)" type="mark" value="Mark" class="mark">Mark</button>
+      </p>
+      <p>
+        <a href="#Block1">Block 1 questions list</a>
+      </p>
+    </div>
+    <br><br>
+
+    <div>
+      <img id="Q27" src="questions/block1/1_27.jpg" alt="1_27" style="width:1300px;height:450px;"><br>
+      <input id="27A" TYPE="Radio" name="question27" Value="27A">A<br>
+      <input id="27B" TYPE="Radio" name="question27" Value="27B">B<br>
+      <input id="27C" TYPE="Radio" name="question27" Value="27C">C<br>
+      <input id="27D" TYPE="Radio" name="question27" Value="27D">D<br>
+      <input id="27E" TYPE="Radio" name="question27" Value="27E">E<br>
+      <p>
+        <button id="27" onclick="Mark(this)" type="mark" value="Mark" class="mark">Mark</button>
+      </p>
+      <p>
+        <a href="#Block1">Block 1 questions list</a>
+      </p>
+    </div>
+    <br><br>
+
+    <div>
+      <img id="Q28" src="questions/block1/1_28.jpg" alt="1_28" style="width:1300px;height:300px;"><br>
+      <input id="28A" TYPE="Radio" name="question28" Value="28A">A<br>
+      <input id="28B" TYPE="Radio" name="question28" Value="28B">B<br>
+      <input id="28C" TYPE="Radio" name="question28" Value="28C">C<br>
+      <input id="28D" TYPE="Radio" name="question28" Value="28D">D<br>
+      <input id="28E" TYPE="Radio" name="question28" Value="28E">E<br>
+      <p>
+        <button id="28" onclick="Mark(this)" type="mark" value="Mark" class="mark">Mark</button>
+      </p>
+      <p>
+        <a href="#Block1">Block 1 questions list</a>
+      </p>
+    </div>
+    <br><br>
+
+    <div>
+      <img id="Q29" src="questions/block1/1_29.jpg" alt="1_29" style="width:1300px;height:300px;"><br>
+      <input id="29A" TYPE="Radio" name="question29" Value="29A">A<br>
+      <input id="29B" TYPE="Radio" name="question29" Value="29B">B<br>
+      <input id="29C" TYPE="Radio" name="question29" Value="29C">C<br>
+      <input id="29D" TYPE="Radio" name="question29" Value="29D">D<br>
+      <input id="29E" TYPE="Radio" name="question29" Value="29E">E<br>
+      <p>
+        <button id="29" onclick="Mark(this)" type="mark" value="Mark" class="mark">Mark</button>
+      </p>
+      <p>
+        <a href="#Block1">Block 1 questions list</a>
+      </p>
+    </div>
+    <br><br>
+
+    <div>
+      <img id="Q30" src="questions/block1/1_30.jpg" alt="1_30" style="width:1300px;height:300px;"><br>
+      <input id="30A" TYPE="Radio" name="question30" Value="30A">A<br>
+      <input id="30B" TYPE="Radio" name="question30" Value="30B">B<br>
+      <input id="30C" TYPE="Radio" name="question30" Value="30C">C<br>
+      <input id="30D" TYPE="Radio" name="question30" Value="30D">D<br>
+      <input id="30E" TYPE="Radio" name="question30" Value="30E">E<br>
+      <input id="30F" TYPE="Radio" name="question30" Value="30F">F<br>
+      <input id="30G" TYPE="Radio" name="question30" Value="30G">G<br>
+      <input id="30H" TYPE="Radio" name="question30" Value="30H">H<br>
+      <p>
+        <button id="30" onclick="Mark(this)" type="mark" value="Mark" class="mark">Mark</button>
+      </p>
+      <p>
+        <a href="#Block1">Block 1 questions list</a>
+      </p>
+    </div>
+    <br><br>
+
+    <div>
+      <img id="Q31" src="questions/block1/1_31.jpg" alt="1_31" style="width:1300px;height:500px;"><br>
+      <input id="31A" TYPE="Radio" name="question31" Value="31A">A<br>
+      <input id="31B" TYPE="Radio" name="question31" Value="31B">B<br>
+      <input id="31C" TYPE="Radio" name="question31" Value="31C">C<br>
+      <input id="31D" TYPE="Radio" name="question31" Value="31D">D<br>
+      <input id="31E" TYPE="Radio" name="question31" Value="31E">E<br>
+      <p>
+        <button id="31" onclick="Mark(this)" type="mark" value="Mark" class="mark">Mark</button>
+      </p>
+      <p>
+        <a href="#Block1">Block 1 questions list</a>
+      </p>
+    </div>
+    <br><br>
+
+    <div>
+      <img id="Q32" src="questions/block1/1_32.jpg" alt="1_32" style="width:1300px;height:300px;"><br>
+      <input id="32A" TYPE="Radio" name="question32" Value="32A">A<br>
+      <input id="32B" TYPE="Radio" name="question32" Value="32B">B<br>
+      <input id="32C" TYPE="Radio" name="question32" Value="32C">C<br>
+      <input id="32D" TYPE="Radio" name="question32" Value="32D">D<br>
+      <input id="32E" TYPE="Radio" name="question32" Value="32E">E<br>
+      <input id="32F" TYPE="Radio" name="question32" Value="32F">F<br>
+      <p>
+        <button id="32" onclick="Mark(this)" type="mark" value="Mark" class="mark">Mark</button>
+      </p>
+      <p>
+        <a href="#Block1">Block 1 questions list</a>
+      </p>
+    </div>
+    <br><br>
+
+    <div>
+      <img id="Q33" src="questions/block1/1_33.jpg" alt="1_33" style="width:1300px;height:300px;"><br>
+      <input id="33A" TYPE="Radio" name="question33" Value="33A">A<br>
+      <input id="33B" TYPE="Radio" name="question33" Value="33B">B<br>
+      <input id="33C" TYPE="Radio" name="question33" Value="33C">C<br>
+      <input id="33D" TYPE="Radio" name="question33" Value="33D">D<br>
+      <input id="33E" TYPE="Radio" name="question33" Value="33E">E<br>
+      <p>
+        <button id="33" onclick="Mark(this)" type="mark" value="Mark" class="mark">Mark</button>
+      </p>
+      <p>
+        <a href="#Block1">Block 1 questions list</a>
+      </p>
+    </div>
+    <br><br>
+
+    <div>
+      <img id="Q34" src="questions/block1/1_34.jpg" alt="1_34" style="width:1300px;height:300px;"><br>
+      <input id="34A" TYPE="Radio" name="question34" Value="34A">A<br>
+      <input id="34B" TYPE="Radio" name="question34" Value="34B">B<br>
+      <input id="34C" TYPE="Radio" name="question34" Value="34C">C<br>
+      <input id="34D" TYPE="Radio" name="question34" Value="34D">D<br>
+      <input id="34E" TYPE="Radio" name="question34" Value="34E">E<br>
+      <p>
+        <button id="34" onclick="Mark(this)" type="mark" value="Mark" class="mark">Mark</button>
+      </p>
+      <p>
+        <a href="#Block1">Block 1 questions list</a>
+      </p>
+    </div>
+    <br><br>
+
+    <div>
+      <img id="Q35" src="questions/block1/1_35.jpg" alt="1_35" style="width:1300px;height:300px;"><br>
+      <input id="35A" TYPE="Radio" name="question35" Value="35A">A<br>
+      <input id="35B" TYPE="Radio" name="question35" Value="35B">B<br>
+      <input id="35C" TYPE="Radio" name="question35" Value="35C">C<br>
+      <input id="35D" TYPE="Radio" name="question35" Value="35D">D<br>
+      <input id="35E" TYPE="Radio" name="question35" Value="35E">E<br>
+      <p>
+        <button id="35" onclick="Mark(this)" type="mark" value="Mark" class="mark">Mark</button>
+      </p>
+      <p>
+        <a href="#Block1">Block 1 questions list</a>
+      </p>
+    </div>
+    <br><br>
+
+    <div>
+      <img id="Q36" src="questions/block1/1_36.jpg" alt="1_36" style="width:1300px;height:600px;"><br>
+      <input id="36A" TYPE="Radio" name="question36" Value="36A">A<br>
+      <input id="36B" TYPE="Radio" name="question36" Value="36B">B<br>
+      <input id="36C" TYPE="Radio" name="question36" Value="36C">C<br>
+      <input id="36D" TYPE="Radio" name="question36" Value="36D">D<br>
+      <input id="36E" TYPE="Radio" name="question36" Value="36E">E<br>
+      <p>
+        <button id="36" onclick="Mark(this)" type="mark" value="Mark" class="mark">Mark</button>
+      </p>
+      <p>
+        <a href="#Block1">Block 1 questions list</a>
+      </p>
+    </div>
+    <br><br>
+
+    <div>
+      <img id="37Q" src="questions/block1/1_37.jpg" alt="1_37" style="width:1300px;height:300px;"><br>
+      <input id="37A" TYPE="Radio" name="question37" Value="37A">A<br>
+      <input id="37B" TYPE="Radio" name="question37" Value="37B">B<br>
+      <input id="37C" TYPE="Radio" name="question37" Value="37C">C<br>
+      <input id="37D" TYPE="Radio" name="question37" Value="37D">D<br>
+      <input id="37E" TYPE="Radio" name="question37" Value="37E">E<br>
+      <input id="37F" TYPE="Radio" name="question37" Value="37F">F<br>
+      <input id="37G" TYPE="Radio" name="question37" Value="37G">G<br>
+      <input id="37H" TYPE="Radio" name="question37" Value="37H">H<br>
+      <p>
+        <button id="37" onclick="Mark(this)" type="mark" value="Mark" class="mark">Mark</button>
+      </p>
+      <p>
+        <a href="#Block1">Block 1 questions list</a>
+      </p>
+    </div>
+    <br><br>
+
+    <div>
+      <img id="Q38" src="questions/block1/1_38.jpg" alt="1_38" style="width:1300px;height:300px;"><br>
+      <input id="38A" TYPE="Radio" name="question38" Value="38A">A<br>
+      <input id="38B" TYPE="Radio" name="question38" Value="38B">B<br>
+      <input id="38C" TYPE="Radio" name="question38" Value="38C">C<br>
+      <input id="38D" TYPE="Radio" name="question38" Value="38D">D<br>
+      <input id="38E" TYPE="Radio" name="question38" Value="38E">E<br>
+      <p>
+        <button id="38" onclick="Mark(this)" type="mark" value="Mark" class="mark">Mark</button>
+      </p>
+      <p>
+        <a href="#Block1">Block 1 questions list</a>
+      </p>
+    </div>
+    <br><br>
+
+    <div>
+      <img id="Q39" src="questions/block1/1_39.jpg" alt="1_39" style="width:1300px;height:300px;"><br>
+      <input id="39A" TYPE="Radio" name="question39" Value="39A">A<br>
+      <input id="39B" TYPE="Radio" name="question39" Value="39B">B<br>
+      <input id="39C" TYPE="Radio" name="question39" Value="39C">C<br>
+      <input id="39D" TYPE="Radio" name="question39" Value="39D">D<br>
+      <input id="39E" TYPE="Radio" name="question39" Value="39E">E<br>
+      <p>
+        <button id="39" onclick="Mark(this)" type="mark" value="Mark" class="mark">Mark</button>
+      </p>
+      <p>
+        <a href="#Block1">Block 1 questions list</a>
+      </p>
+    </div>
+    <br><br>
+
+    <div>
+      <img id="Q40" src="questions/block1/1_40.jpg" alt="1_40" style="width:1300px;height:400px;"><br>
+      <input id="40A" TYPE="Radio" name="question40" Value="40A">A<br>
+      <input id="40B" TYPE="Radio" name="question40" Value="40B">B<br>
+      <input id="40C" TYPE="Radio" name="question40" Value="40C">C<br>
+      <input id="40D" TYPE="Radio" name="question40" Value="40D">D<br>
+      <input id="40E" TYPE="Radio" name="question40" Value="40E">E<br>
+      <p>
+        <button id="40" onclick="Mark(this)" type="mark" value="Mark" class="mark">Mark</button>
+      </p>
+      <p>
+        <a href="#Block1">Block 1 questions list</a>
+      </p>
+    </div>
+    <br><br>
+
+    <div>
+      <img id="Q41" src="questions/block1/1_41.jpg" alt="1_41" style="width:1300px;height:300px;"><br>
+      <input id="41A" TYPE="Radio" name="question41" Value="41A">A<br>
+      <input id="41B" TYPE="Radio" name="question41" Value="41B">B<br>
+      <input id="41C" TYPE="Radio" name="question41" Value="41C">C<br>
+      <input id="41D" TYPE="Radio" name="question41" Value="41D">D<br>
+      <input id="41E" TYPE="Radio" name="question41" Value="41E">E<br>
+      <p>
+        <button id="41" onclick="Mark(this)" type="mark" value="Mark" class="mark">Mark</button>
+      </p>
+      <p>
+        <a href="#Block1">Block 1 questions list</a>
+      </p>
+    </div>
+    <br><br>
+
+    <div>
+      <img id="Q42" src="questions/block1/1_42.jpg" alt="1_42" style="width:1300px;height:300px;"><br>
+      <input id="42A" TYPE="Radio" name="question42" Value="42A">A<br>
+      <input id="42B" TYPE="Radio" name="question42" Value="42B">B<br>
+      <input id="42C" TYPE="Radio" name="question42" Value="42C">C<br>
+      <input id="42D" TYPE="Radio" name="question42" Value="42D">D<br>
+      <input id="42E" TYPE="Radio" name="question42" Value="42E">E<br>
+      <p>
+        <button id="42" onclick="Mark(this)" type="mark" value="Mark" class="mark">Mark</button>
+      </p>
+      <p>
+        <a href="#Block1">Block 1 questions list</a>
+      </p>
+    </div>
+    <br><br>
+
+    <div>
+      <img id="Q43" src="questions/block1/1_43.jpg" alt="1_43" style="width:1300px;height:600px;"><br>
+      <input id="43A" TYPE="Radio" name="question43" Value="43A">A<br>
+      <input id="43B" TYPE="Radio" name="question43" Value="43B">B<br>
+      <input id="43C" TYPE="Radio" name="question43" Value="43C">C<br>
+      <input id="43D" TYPE="Radio" name="question43" Value="43D">D<br>
+      <input id="43E" TYPE="Radio" name="question43" Value="43E">E<br>
+      <p>
+        <button id="43" onclick="Mark(this)" type="mark" value="Mark" class="mark">Mark</button>
+      </p>
+      <p>
+        <a href="#Block1">Block 1 questions list</a>
+      </p>
+    </div>
+    <br><br>
+
+    <div>
+      <img id="Q44" src="questions/block1/1_44.jpg" alt="1_44" style="width:1300px;height:300px;"><br>
+      <input id="44A" TYPE="Radio" name="question44" Value="44A">A<br>
+      <input id="44B" TYPE="Radio" name="question44" Value="44B">B<br>
+      <input id="44C" TYPE="Radio" name="question44" Value="44C">C<br>
+      <input id="44D" TYPE="Radio" name="question44" Value="44D">D<br>
+      <input id="44E" TYPE="Radio" name="question44" Value="44E">E<br>
+      <p>
+        <button id="44" onclick="Mark(this)" type="mark" value="Mark" class="mark">Mark</button>
+      </p>
+      <p>
+        <a href="#Block1">Block 1 questions list</a>
+      </p>
+    </div>
+    <br><br>
+
+    <div>
+      <img id="Q45" src="questions/block1/1_45.jpg" alt="1_45" style="width:1300px;height:300px;"><br>
+      <input id="45A" TYPE="Radio" name="question45" Value="45A">A<br>
+      <input id="45B" TYPE="Radio" name="question45" Value="45B">B<br>
+      <input id="45C" TYPE="Radio" name="question45" Value="45C">C<br>
+      <input id="45D" TYPE="Radio" name="question45" Value="45D">D<br>
+      <input id="45E" TYPE="Radio" name="question45" Value="45E">E<br>
+      <p>
+        <button id="" onclick="Mark(this)" type="mark" value="Mark" class="mark">Mark</button>
+      </p>
+      <p>
+        <a href="#Block1">Block 1 questions list</a>
+      </p>
+    </div>
+    <br><br>
+
+    <div>
+      <img id="Q46" src="questions/block1/1_46.jpg" alt="1_46" style="width:1300px;height:300px;"><br>
+      <input id="46A" TYPE="Radio" name="question46" Value="46A">A<br>
+      <input id="46B" TYPE="Radio" name="question46" Value="46B">B<br>
+      <input id="46C" TYPE="Radio" name="question46" Value="46C">C<br>
+      <input id="46D" TYPE="Radio" name="question46" Value="46D">D<br>
+      <input id="46E" TYPE="Radio" name="question46" Value="46E">E<br>
+      <p>
+        <button id="46" onclick="Mark(this)" type="mark" value="Mark" class="mark">Mark</button>
+      </p>
+      <p>
+        <a href="#Block1">Block 1 questions list</a>
+      </p>
+    </div>
+    <br><br>
+
+    <div>
+      <img id="Q47" src="questions/block1/1_47.jpg" alt="1_47" style="width:1300px;height:300px;"><br>
+      <input id="47A" TYPE="Radio" name="question47" Value="47A">A<br>
+      <input id="47B" TYPE="Radio" name="question47" Value="47B">B<br>
+      <input id="47C" TYPE="Radio" name="question47" Value="47C">C<br>
+      <input id="47D" TYPE="Radio" name="question47" Value="47D">D<br>
+      <input id="47E" TYPE="Radio" name="question47" Value="47E">E<br>
+      <p>
+        <button id="47" onclick="Mark(this)" type="mark" value="Mark" class="mark">Mark</button>
+      </p>
+      <p>
+        <a href="#Block1">Block 1 questions list</a>
+      </p>
+    </div>
+    <br><br>
+
+    <div>
+      <img id="Q48" src="questions/block1/1_48.jpg" alt="1_48" style="width:1300px;height:450px;"><br>
+      <input id="48A" TYPE="Radio" name="question48" Value="48A">A<br>
+      <input id="48B" TYPE="Radio" name="question48" Value="48B">B<br>
+      <input id="48C" TYPE="Radio" name="question48" Value="48C">C<br>
+      <input id="48D" TYPE="Radio" name="question48" Value="48D">D<br>
+      <input id="48E" TYPE="Radio" name="question48" Value="48E">E<br>
+      <input id="48F" TYPE="Radio" name="question48" Value="48F">F<br>
+      <input id="48G" TYPE="Radio" name="question48" Value="48G">G<br>
+      <input id="48H" TYPE="Radio" name="question48" Value="48H">H<br>
+      <input id="48I" TYPE="Radio" name="question48" Value="48I">I<br>
+      <input id="48J" TYPE="Radio" name="question48" Value="48J">J<br>
+      <p>
+        <button id="48" onclick="Mark(this)" type="mark" value="Mark" class="mark">Mark</button>
+      </p>
+      <p>
+        <a href="#Block1">Block 1 questions list</a>
+      </p>
+    </div>
+    <br><br>
+
+    <div>
+      <img id="Q49" src="questions/block1/1_49.jpg" alt="1_49" style="width:1300px;height:600px;"><br>
+      <input id="49A" TYPE="Radio" name="questoion49" Value="49A">A<br>
+      <input id="49B" TYPE="Radio" name="questoion49" Value="49B">B<br>
+      <input id="49C" TYPE="Radio" name="questoion49" Value="49C">C<br>
+      <input id="49D" TYPE="Radio" name="questoion49" Value="49D">D<br>
+      <input id="49E" TYPE="Radio" name="questoion49" Value="49E">E<br>
+      <input id="49F" TYPE="Radio" name="questoion49" Value="49F">F<br>
+      <p>
+        <button id="49" onclick="Mark(this)" type="mark" value="Mark" class="mark">Mark</button>
+      </p>
+      <p>
+        <a href="#Block1">Block 1 questions list</a>
+      </p>
+    </div>
+    <br><br>
+
+    <div>
+      <img id="Q50" src="questions/block1/1_50.jpg" alt="1_50" style="width:1300px;height:300px;"><br>
+      <input id="50A" TYPE="Radio" name="question50" Value="50A">A<br>
+      <input id="50B" TYPE="Radio" name="question50" Value="50B">B<br>
+      <input id="50C" TYPE="Radio" name="question50" Value="50C">C<br>
+      <input id="50D" TYPE="Radio" name="question50" Value="50D">D<br>
+      <input id="50E" TYPE="Radio" name="question50" Value="50E">E<br>
+      <input id="50F" TYPE="Radio" name="question50" Value="50F">F<br>
+      <input id="50G" TYPE="Radio" name="question50" Value="50G">G<br>
+      <input id="50H" TYPE="Radio" name="question50" Value="50H">H<br>
+      <input id="50I" TYPE="Radio" name="question50" Value="50I">I<br>
+      <input id="50J" TYPE="Radio" name="question50" Value="50J">J<br>
+      <input id="50K" TYPE="Radio" name="question50" Value="50K">K<br>
+      <p>
+        <button id="50" onclick="Mark(this)" type="mark" value="Mark" class="mark">Mark</button>
+      </p>
+      <p>
+        <a href="#Block1">Block 1 questions list</a>
+      </p>
+    </div>
+    <br><br>
+
+
+    <nav>
+      <a id="Qnd1" className="reference" href="#Q1" value="Qn1">Q01</a>
+      <a id="Qnd2" className="reference" href="#Q2" value="Qn2">Q02</a>
+      <a id="Qnd3" className="reference" href="#Q3" value="Qn3">Q03</a>
+      <a id="Qnd4" className="reference" href="#Q4" value="Qn4">Q04</a>
+      <a id="Qnd5" className="reference" href="#Q5" value="Qn5">Q05</a>
+      <a id="Qnd6" className="reference" href="#Q6" value="Qn6">Q06</a>
+      <a id="Qnd7" className="reference" href="#Q7" value="Qn7">Q07</a>
+      <a id="Qnd8" className="reference" href="#Q8" value="Qn8">Q08</a>
+      <a id="Qnd9" className="reference" href="#Q9" value="Qn9">Q09</a>
+      <a id="Qnd10" className="reference" href="#Q10" value="Qn10">Q10</a><br>
+      <a id="Qnd11" className="reference" href="#Q11" value="Qn11">Q11</a>
+      <a id="Qnd12" className="reference" href="#Q12" value="Qn12">Q12</a>
+      <a id="Qnd13" className="reference" href="#Q13" value="Qn13">Q13</a>
+      <a id="Qnd14" className="reference" href="#Q14" value="Qn14">Q14</a>
+      <a id="Qnd15" className="reference" href="#Q15" value="Qn15">Q15</a>
+      <a id="Qnd16" className="reference" href="#Q16" value="Qn16">Q16</a>
+      <a id="Qnd17" className="reference" href="#Q17" value="Qn17">Q17</a>
+      <a id="Qnd18" className="reference" href="#Q18" value="Qn18">Q18</a>
+      <a id="Qnd19" className="reference" href="#Q19" value="Qn19">Q19</a>
+      <a id="Qnd20" className="reference" href="#Q20" value="Qn20">Q20</a><br>
+      <a id="Qnd21" className="reference" href="#Q21" value="Qn21">Q21</a>
+      <a id="Qnd22" className="reference" href="#Q22" value="Qn22">Q22</a>
+      <a id="Qnd23" className="reference" href="#Q23" value="Qn23">Q23</a>
+      <a id="Qnd24" className="reference" href="#Q24" value="Qn24">Q24</a>
+      <a id="Qnd25" className="reference" href="#Q25" value="Qn25">Q25</a>
+      <a id="Qnd26" className="reference" href="#Q26" value="Qn26">Q26</a>
+      <a id="Qnd27" className="reference" href="#Q27" value="Qn27">Q27</a>
+      <a id="Qnd28" className="reference" href="#Q28" value="Qn28">Q28</a>
+      <a id="Qnd29" className="reference" href="#Q29" value="Qn29">Q29</a>
+      <a id="Qnd30" className="reference" href="#Q30" value="Qn30">Q30</a><br>
+      <a id="Qnd31" className="reference" href="#Q31" value="Qn31">Q31</a>
+      <a id="Qnd32" className="reference" href="#Q32" value="Qn32">Q32</a>
+      <a id="Qnd33" className="reference" href="#Q33" value="Qn33">Q33</a>
+      <a id="Qnd34" className="reference" href="#Q34" value="Qn34">Q34</a>
+      <a id="Qnd35" className="reference" href="#Q35" value="Qn35">Q35</a>
+      <a id="Qnd36" className="reference" href="#Q36" value="Qn36">Q36</a>
+      <a id="Qnd37" className="reference" href="#Q37" value="Qn37">Q37</a>
+      <a id="Qnd38" className="reference" href="#Q38" value="Qn38">Q38</a>
+      <a id="Qnd39" className="reference" href="#Q39" value="Qn39">Q39</a>
+      <a id="Qnd40" className="reference" href="#Q40" value="Qn40">Q40</a><br>
+      <a id="Qnd41" className="reference" href="#Q41" value="Qn41">Q41</a>
+      <a id="Qnd42" className="reference" href="#Q42" value="Qn42">Q42</a>
+      <a id="Qnd43" className="reference" href="#Q43" value="Qn43">Q43</a>
+      <a id="Qnd44" className="reference" href="#Q44" value="Qn44">Q44</a>
+      <a id="Qnd45" className="reference" href="#Q45" value="Qn45">Q45</a>
+      <a id="Qnd46" className="reference" href="#Q46" value="Qn46">Q46</a>
+      <a id="Qnd47" className="reference" href="#Q47" value="Qn47">Q47</a>
+      <a id="Qnd48" className="reference" href="#Q48" value="Qn48">Q48</a>
+      <a id="Qnd49" className="reference" href="#Q49" value="Qn49">Q49</a>
+      <a id="Qnd50" className="reference" href="#Q50" value="Qn50">Q50</a>
+    </nav>
+    <br><br>
+    </div>
+
+    <div class="block2">
+    <h1 id="Block2">BLOCK 2</h1>
+<!--     <br>
     <nav>
       <a id="Qn1" className="reference" href="#Q1" value="Qn1">Q1</a>
       <a id="Qn2" className="reference" href="#Q2" value="Qn2">Q2</a>
@@ -31,10 +1022,10 @@
       <a id="Qn4" className="reference" href="#Q4" value="Qn4">Q4</a>
       <a id="Qn5" className="reference" href="#Q5" value="Qn5">Q5</a>
       <a id="Qn6" className="reference" href="#Q6" value="Qn6">Q6</a>
-    </nav>
+    </nav> -->
 
     <br><br>
-    <div>
+    <!-- <div>
       <p id="Q1" class="Question" Value="Q1">
         Q1. What is your name?
       </p>
@@ -42,7 +1033,7 @@
       <input id="1B" TYPE="Radio" name="question1" Value="1B">Satish<br>
       <input id="1C" TYPE="Radio" name="question1" Value="1C">Debby<br>
       <input id="1D" TYPE="Radio" name="question1" Value="1D">Still Figuring out<br><br>
-      <button id="1" onclick="myFunction(this)" type="mark" value="Mark" class="mark">Mark</button>
+      <button id="1" onclick="Mark(this)" type="mark" value="Mark" class="mark">Mark</button>
     </div>
     <div>
       <p id="Q2" class="Question" Value="Q2">
@@ -52,7 +1043,7 @@
       <input id="2B" TYPE="Radio" name ="question2" Value="2B">24<br>
       <input id="2C" TYPE="Radio" name ="question2" Value="2C">26<br>
       <input id="2D" TYPE="Radio" name ="question2" Value="2D">I'M A GRANDMA<br><br>
-      <button id="2" onclick="myFunction(this)" type="mark" value="Mark" class="mark">Mark</button>
+      <button id="" onclick="Mark(this)" type="mark" value="Mark" class="mark">Mark</button>
     </div>
     <div>
       <p id="Q3" class="Question" Value="Q3">
@@ -62,7 +1053,7 @@
       <input id="3B" TYPE="Radio" name="question3" Value="2B">24<br>
       <input id="3C" TYPE="Radio" name="question3" Value="2C">26<br>
       <input id="3D" TYPE="Radio" name="question3" Value="2D">I'M A GRANDMA<br><br>
-      <button id="3" onclick="myFunction(this)" type="mark" value="Mark" class="mark">Mark</button>
+      <button id="3" onclick="Mark(this)" type="mark" value="Mark" class="mark">Mark</button>
     </div>
     <form>
       <p id="Q4" class="Question" Value="Q4">
@@ -72,7 +1063,7 @@
       <input id="4B" TYPE="Radio" name="question4" Value="2B">24<br>
       <input id="4C" TYPE="Radio" name="question4" Value="2C">26<br>
       <input id="4D" TYPE="Radio" name="question4" Value="2D">I'M A GRANDMA<br><br>
-      <button id="4" onclick="myFunction(this)" type="mark" value="Mark" class="mark">Mark</button>
+      <button id="4" onclick="Mark(this)" type="mark" value="Mark" class="mark">Mark</button>
     </form>
     <div>
       <p id="Q5" class="Question" Value="Q5">
@@ -82,7 +1073,7 @@
       <input id="5B" TYPE="Radio" name="question5" Value="2B">24<br>
       <input id="5C" TYPE="Radio" name="question5" Value="2C">26<br>
       <input id="5D" TYPE="Radio" name="question5" Value="2D">I'M A GRANDMA<br><br>
-      <button id="5" onclick="myFunction(this)" type="mark" value="Mark" class="mark">Mark</button>
+      <button id="5" onclick="Mark(this)" type="mark" value="Mark" class="mark">Mark</button>
     </div>
     <div>
       <p id="Q6" class="Question" Value="Q6">
@@ -92,25 +1083,16 @@
       <input id="6B" TYPE="Radio" name="questoin6" Value="2B">24<br>
       <input id="6C" TYPE="Radio" name="questoin6" Value="2C">26<br>
       <input id="6D" TYPE="Radio" name="questoin6" Value="2D">I'M A GRANDMA<br><br>
-      <button id="6" onclick="myFunction(this)" type="mark" value="Mark" class="mark">Mark</button>
-    </div>
+      <button id="6" onclick="Mark(this)" type="mark" value="Mark" class="mark">Mark</button>
+    </div> -->
+  </div>
 
     <h3>
       <button id="submit" onclick="Submit()" type="submit" value="Submit">Submit</button>
     </h3>
-
-    <nav>
-      <a id="Qnd1" className="reference" href="#Q1" value="Qn1">Q1</a>
-      <a id="Qnd2" className="reference" href="#Q2" value="Qn2">Q2</a>
-      <a id="Qnd3" className="reference" href="#Q3" value="Qn3">Q3</a>
-      <a id="Qnd4" className="reference" href="#Q4" value="Qn4">Q4</a>
-      <a id="Qnd5" className="reference" href="#Q5" value="Qn5">Q5</a>
-      <a id="Qnd6" className="reference" href="#Q6" value="Qn6">Q6</a>
-    </nav>
-    <br><br>
-
+    <br><br>  
     <script>
-      function myFunction(elmnt)
+      function Mark(elmnt)
         {
           var x = elmnt;
           var id = "Qn" + elmnt.id;
@@ -134,7 +1116,7 @@
         }
       function Submit()
         {
-          var answers = ["1A", "2A", "3A", "4A", "5A", "6A"]
+          var answers = ["1B","2A","3E","4D","5F","6E","7B","8B","9C","10D","11B","12B","13A","14F","15E","16B","17A","18D","19A","20A","21A","22A","23A","24E","25A","26C","27E","28C","29A","30C","31A","32F","33B","34B","35C","36E","37A","38D","39A","40D","41D","42E","43D","44C","45C","46C","47E","48G","49D","50F"]
           var score = 0
           var correct_answers = ""
           for(i = 0; i < answers.length; i++)
@@ -152,15 +1134,17 @@
             }
           if (correct_answers == "")
             {
-              message = "Your score is " + score + "\n You did a great job"
+              message = "Your score is " + score + "/" + answers.length + "\n You did a great job"
             }
           else
             {
-              message = "Your score is " + score + "\n Correct answers are \n" + correct_answers 
+              message = "Your score is " + score + "/" + answers.length + "\n Correct answers are \n" + correct_answers 
             }
           
           window.alert(message);
         }      
     </script>
+    <!-- <link rel="import" href="/block1.html"> -->
+    <script type="text/javascript" src="score.js"></script>
   </body>
 </html>
