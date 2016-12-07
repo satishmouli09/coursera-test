@@ -2,22 +2,26 @@
 <html>
   <head>
   	<meta charset="utf-8">
-  	<title>NBME</title>
+  	<title>NBME 12</title>
     <style>
       div.start{
-            background-color: #DAF7A6;
+            background-color: lightgrey;
         }
       div.block1{
-            background-color: lightblue;
-        }
-      div.block2 {
             background-color: lightgreen;
         }
+      div.block2 {
+            background-color: lightblue;
+        }
       div.block3{
-            background-color: #FF69B4; 
+            background-color: #ADFF2F; 
         }
       div.block4 {
-            background-color: #DAF7A6;
+            background-color: #BDB76B;
+        }
+      h2 , li {
+            font-size: 20px;
+            font-style: italic; 
         }
       .Question, #submit, .Info {
           font-size: 20px;
@@ -44,9 +48,13 @@
       marquee {
           font-size: 30px;
           color: #FF33D1;
-          text-decoration: blink;
+        }
+      span {
+          color: red;
+          text-decoration: underline; 
         }
     </style>
+    <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
   </head>
 
   <body>
@@ -55,13 +63,13 @@
       NBME 12
     </h1>
     <div>
-      <marquee> ALL THE BEST!!&nbsp;&nbsp;&nbsp;ALL THE BEST!!&nbsp;&nbsp;&nbsp;ALL THE BEST!!&nbsp;&nbsp;&nbsp;ALL THE BEST!!&nbsp;&nbsp;&nbsp;ALL THE BEST!!&nbsp;&nbsp;&nbsp;ALL THE BEST!!&nbsp;&nbsp;&nbsp;ALL THE BEST!!&nbsp;&nbsp;&nbsp;ALL THE BEST!!</marquee>
+      <marquee> ALL THE BEST!!<i class="em em---1"></i>&nbsp;&nbsp;&nbsp;ALL THE BEST!!<i class="em em-blush"></i>&nbsp;&nbsp;&nbsp;ALL THE BEST!!<i class="em em-kissing_closed_eyes"></i>&nbsp;&nbsp;&nbsp;ALL THE BEST!!<i class="em em---1"></i>&nbsp;&nbsp;&nbsp;ALL THE BEST!!<i class="em em-blush"></i>&nbsp;&nbsp;&nbsp;ALL THE BEST!!<i class="em em-kissing_closed_eyes"></i>&nbsp;&nbsp;&nbsp;ALL THE BEST!!<i class="em em---1"></i>&nbsp;&nbsp;&nbsp;ALL THE BEST!!<i class="em em-kissing_closed_eyes"></i></marquee>
     </div>
     <div>
       <p id="name" class="Info">
         Please select your name
       </p>
-      <select style="font-size: 20px;" style="color: #FF33D1;">
+      <select id="name_select" style="font-size: 20px;" style="color: #FF33D1;">
         <option class="Name" value="Bunny">Bunny</option>
         <option class="Name" value="Cutie Pie">Cutie Pie</option>
         <option class="Name" value="Debby">Debby</option>
@@ -72,13 +80,31 @@
       <p id="gender" class="Info">
         Please select your Gender
       </p>
-      <input id="male" TYPE="Radio" Name="Gender" Value="Male"><label style="font-size: 20px;">Male</label>
-      <!-- <input id="female" TYPE="Radio" Name="Gender" Value="Female"><label style="font-size: 20px;">Female</label> -->
-      <input id="lesbian" TYPE="Radio" Name="Gender" Value="Lesbian"><label style="font-size: 20px;">Lesbian</label>
-      <input id="gay" TYPE="Radio" Name="Gender" Value="Gay"><label style="font-size: 20px;">Gay</label>
-      <input id="bisexual" TYPE="Radio" Name="Gender" Value="Female"><label style="font-size: 20px;">BiSexual</label>
+      <input id="male" TYPE="Radio" onclick="GenderCheck(this)" Name="Gender" Value="Male"><label style="font-size: 20px;">Male</label>
+      <input id="female" TYPE="Radio" onclick="GenderCheck(this)" Name="Gender" Value="Female"><label style="font-size: 20px;">Female</label>
+      <input id="lesbian" TYPE="Radio" onclick="GenderCheck(this)" Name="Gender" Value="Lesbian"><label style="font-size: 20px;">Lesbian</label>
+      <input id="gay" TYPE="Radio" onclick="GenderCheck(this)" Name="Gender" Value="Gay"><label style="font-size: 20px;">Gay</label>
+      <input id="bisexual" TYPE="Radio" onclick="GenderCheck(this)" Name="Gender" Value="BiSexual"><label style="font-size: 20px;">BiSexual</label>
     </div>
     <br><br>
+    <h2>Please go through the following instructions carefully before attempting the questions.</h2>
+    <ol>
+      <li>There are <u>four</u> blocks containing <u>50</u> questions each(a total of 200 <i class="em em-unamused"></i><i class="em em-unamused"></i>).</li>
+      <li>Time allotted for each block is <u>60</u> mins(Please carry a timer <i class="em em-grimacing"></i><i class="em em-grimacing"></i>).</li>
+      <li>Each block has question navigator(only the questions in that particular block) at the beginning and end of the block.</li>
+      <li>You can go to question navigator(of a particular block) from any question by clicking the <u>Block X questions list</u> (X=1,2,3,4).</li>
+      <li>There is a block navigator at the end of each block</li>
+      <li>All marked questions are highlighted with red text in the question navigator (Ex:-<u>Q24</u> <span>Q25</span> <u>Q26</u> <u>Q27</u> <span>Q28</span> Here questions 25 and 28 are marked for review).</li>
+      <li><b>The distinction between answered and unanswered questions is not reflected in question navigator.</b></li>
+      <li>Block 2 questions start with the number 51 (not 1), Block 3 with 101 and Block 4 with 151.</li>
+      <li><b>Do not reload the page after starting the test. This will lead to deselection of all answers marked previously.</b></li>
+      <li>All the Best!! <i class="em em-kissing_closed_eyes"></i><i class="em em-kissing_closed_eyes"></i></li>
+
+    </ol>  
+
+
+    <br><br>
+    <b>
     <nav>
       <a id="block1" class="Blocks" href="#Block1" value="block1">Block 1</a><br><br>
       <a id="block2" class="Blocks" href="#Block2" value="block2">Block 2</a><br><br>
@@ -92,56 +118,56 @@
     <h1 id="Block1">BLOCK 1</h1>
     <br>
     <nav class="QuestionNavigation">
-      <a id="Qn1" className="reference" href="#Q1" value="Qn1">Q-01</a>
-      <a id="Qn2" className="reference" href="#Q2" value="Qn2">Q-02</a>
-      <a id="Qn3" className="reference" href="#Q3" value="Qn3">Q-03</a>
-      <a id="Qn4" className="reference" href="#Q4" value="Qn4">Q-04</a>
-      <a id="Qn5" className="reference" href="#Q5" value="Qn5">Q-05</a>
-      <a id="Qn6" className="reference" href="#Q6" value="Qn6">Q-06</a>
-      <a id="Qn7" className="reference" href="#Q7" value="Qn7">Q-07</a>
-      <a id="Qn8" className="reference" href="#Q8" value="Qn8">Q-08</a>
-      <a id="Qn9" className="reference" href="#Q9" value="Qn9">Q-09</a>
-      <a id="Qn10" className="reference" href="#Q10" value="Qn10">Q-10</a><br><br>
-      <a id="Qn11" className="reference" href="#Q11" value="Qn11">Q-11</a>
-      <a id="Qn12" className="reference" href="#Q12" value="Qn12">Q-12</a>
-      <a id="Qn13" className="reference" href="#Q13" value="Qn13">Q-13</a>
-      <a id="Qn14" className="reference" href="#Q14" value="Qn14">Q-14</a>
-      <a id="Qn15" className="reference" href="#Q15" value="Qn15">Q-15</a>
-      <a id="Qn16" className="reference" href="#Q16" value="Qn16">Q-16</a>
-      <a id="Qn17" className="reference" href="#Q17" value="Qn17">Q-17</a>
-      <a id="Qn18" className="reference" href="#Q18" value="Qn18">Q-18</a>
-      <a id="Qn19" className="reference" href="#Q19" value="Qn19">Q-19</a>
-      <a id="Qn20" className="reference" href="#Q20" value="Qn20">Q-20</a><br><br>
-      <a id="Qn21" className="reference" href="#Q21" value="Qn21">Q-21</a>
-      <a id="Qn22" className="reference" href="#Q22" value="Qn22">Q-22</a>
-      <a id="Qn23" className="reference" href="#Q23" value="Qn23">Q-23</a>
-      <a id="Qn24" className="reference" href="#Q24" value="Qn24">Q-24</a>
-      <a id="Qn25" className="reference" href="#Q25" value="Qn25">Q-25</a>
-      <a id="Qn26" className="reference" href="#Q26" value="Qn26">Q-26</a>
-      <a id="Qn27" className="reference" href="#Q27" value="Qn27">Q-27</a>
-      <a id="Qn28" className="reference" href="#Q28" value="Qn28">Q-28</a>
-      <a id="Qn29" className="reference" href="#Q29" value="Qn29">Q-29</a>
-      <a id="Qn30" className="reference" href="#Q30" value="Qn30">Q-30</a><br><br>
-      <a id="Qn31" className="reference" href="#Q31" value="Qn31">Q-31</a>
-      <a id="Qn32" className="reference" href="#Q32" value="Qn32">Q-32</a>
-      <a id="Qn33" className="reference" href="#Q33" value="Qn33">Q-33</a>
-      <a id="Qn34" className="reference" href="#Q34" value="Qn34">Q-34</a>
-      <a id="Qn35" className="reference" href="#Q35" value="Qn35">Q-35</a>
-      <a id="Qn36" className="reference" href="#Q36" value="Qn36">Q-36</a>
-      <a id="Qn37" className="reference" href="#Q37" value="Qn37">Q-37</a>
-      <a id="Qn38" className="reference" href="#Q38" value="Qn38">Q-38</a>
-      <a id="Qn39" className="reference" href="#Q39" value="Qn39">Q-39</a>
-      <a id="Qn40" className="reference" href="#Q40" value="Qn40">Q-40</a><br><br>
-      <a id="Qn41" className="reference" href="#Q41" value="Qn41">Q-41</a>
-      <a id="Qn42" className="reference" href="#Q42" value="Qn42">Q-42</a>
-      <a id="Qn43" className="reference" href="#Q43" value="Qn43">Q-43</a>
-      <a id="Qn44" className="reference" href="#Q44" value="Qn44">Q-44</a>
-      <a id="Qn45" className="reference" href="#Q45" value="Qn45">Q-45</a>
-      <a id="Qn46" className="reference" href="#Q46" value="Qn46">Q-46</a>
-      <a id="Qn47" className="reference" href="#Q47" value="Qn47">Q-47</a>
-      <a id="Qn48" className="reference" href="#Q48" value="Qn48">Q-48</a>
-      <a id="Qn49" className="reference" href="#Q49" value="Qn49">Q-49</a>
-      <a id="Qn50" className="reference" href="#Q50" value="Qn50">Q-50</a>
+      <a id="Qn1" className="reference" href="#Q1" value="Qn1">Q-01</a>&nbsp;&nbsp;
+      <a id="Qn2" className="reference" href="#Q2" value="Qn2">Q-02</a>&nbsp;&nbsp;
+      <a id="Qn3" className="reference" href="#Q3" value="Qn3">Q-03</a>&nbsp;&nbsp;
+      <a id="Qn4" className="reference" href="#Q4" value="Qn4">Q-04</a>&nbsp;&nbsp;
+      <a id="Qn5" className="reference" href="#Q5" value="Qn5">Q-05</a>&nbsp;&nbsp;
+      <a id="Qn6" className="reference" href="#Q6" value="Qn6">Q-06</a>&nbsp;&nbsp;
+      <a id="Qn7" className="reference" href="#Q7" value="Qn7">Q-07</a>&nbsp;&nbsp;
+      <a id="Qn8" className="reference" href="#Q8" value="Qn8">Q-08</a>&nbsp;&nbsp;
+      <a id="Qn9" className="reference" href="#Q9" value="Qn9">Q-09</a>&nbsp;&nbsp;
+      <a id="Qn10" className="reference" href="#Q10" value="Qn10">Q-10</a>&nbsp;&nbsp;<br><br>
+      <a id="Qn11" className="reference" href="#Q11" value="Qn11">Q-11</a>&nbsp;&nbsp;
+      <a id="Qn12" className="reference" href="#Q12" value="Qn12">Q-12</a>&nbsp;&nbsp;
+      <a id="Qn13" className="reference" href="#Q13" value="Qn13">Q-13</a>&nbsp;&nbsp;
+      <a id="Qn14" className="reference" href="#Q14" value="Qn14">Q-14</a>&nbsp;&nbsp;
+      <a id="Qn15" className="reference" href="#Q15" value="Qn15">Q-15</a>&nbsp;&nbsp;
+      <a id="Qn16" className="reference" href="#Q16" value="Qn16">Q-16</a>&nbsp;&nbsp;
+      <a id="Qn17" className="reference" href="#Q17" value="Qn17">Q-17</a>&nbsp;&nbsp;
+      <a id="Qn18" className="reference" href="#Q18" value="Qn18">Q-18</a>&nbsp;&nbsp;
+      <a id="Qn19" className="reference" href="#Q19" value="Qn19">Q-19</a>&nbsp;&nbsp;
+      <a id="Qn20" className="reference" href="#Q20" value="Qn20">Q-20</a>&nbsp;&nbsp;<br><br>
+      <a id="Qn21" className="reference" href="#Q21" value="Qn21">Q-21</a>&nbsp;&nbsp;
+      <a id="Qn22" className="reference" href="#Q22" value="Qn22">Q-22</a>&nbsp;&nbsp;
+      <a id="Qn23" className="reference" href="#Q23" value="Qn23">Q-23</a>&nbsp;&nbsp;
+      <a id="Qn24" className="reference" href="#Q24" value="Qn24">Q-24</a>&nbsp;&nbsp;
+      <a id="Qn25" className="reference" href="#Q25" value="Qn25">Q-25</a>&nbsp;&nbsp;
+      <a id="Qn26" className="reference" href="#Q26" value="Qn26">Q-26</a>&nbsp;&nbsp;
+      <a id="Qn27" className="reference" href="#Q27" value="Qn27">Q-27</a>&nbsp;&nbsp;
+      <a id="Qn28" className="reference" href="#Q28" value="Qn28">Q-28</a>&nbsp;&nbsp;
+      <a id="Qn29" className="reference" href="#Q29" value="Qn29">Q-29</a>&nbsp;&nbsp;
+      <a id="Qn30" className="reference" href="#Q30" value="Qn30">Q-30</a>&nbsp;&nbsp;<br><br>
+      <a id="Qn31" className="reference" href="#Q31" value="Qn31">Q-31</a>&nbsp;&nbsp;
+      <a id="Qn32" className="reference" href="#Q32" value="Qn32">Q-32</a>&nbsp;&nbsp;
+      <a id="Qn33" className="reference" href="#Q33" value="Qn33">Q-33</a>&nbsp;&nbsp;
+      <a id="Qn34" className="reference" href="#Q34" value="Qn34">Q-34</a>&nbsp;&nbsp;
+      <a id="Qn35" className="reference" href="#Q35" value="Qn35">Q-35</a>&nbsp;&nbsp;
+      <a id="Qn36" className="reference" href="#Q36" value="Qn36">Q-36</a>&nbsp;&nbsp;
+      <a id="Qn37" className="reference" href="#Q37" value="Qn37">Q-37</a>&nbsp;&nbsp;
+      <a id="Qn38" className="reference" href="#Q38" value="Qn38">Q-38</a>&nbsp;&nbsp;
+      <a id="Qn39" className="reference" href="#Q39" value="Qn39">Q-39</a>&nbsp;&nbsp;
+      <a id="Qn40" className="reference" href="#Q40" value="Qn40">Q-40</a>&nbsp;&nbsp;<br><br>
+      <a id="Qn41" className="reference" href="#Q41" value="Qn41">Q-41</a>&nbsp;&nbsp;
+      <a id="Qn42" className="reference" href="#Q42" value="Qn42">Q-42</a>&nbsp;&nbsp;
+      <a id="Qn43" className="reference" href="#Q43" value="Qn43">Q-43</a>&nbsp;&nbsp;
+      <a id="Qn44" className="reference" href="#Q44" value="Qn44">Q-44</a>&nbsp;&nbsp;
+      <a id="Qn45" className="reference" href="#Q45" value="Qn45">Q-45</a>&nbsp;&nbsp;
+      <a id="Qn46" className="reference" href="#Q46" value="Qn46">Q-46</a>&nbsp;&nbsp;
+      <a id="Qn47" className="reference" href="#Q47" value="Qn47">Q-47</a>&nbsp;&nbsp;
+      <a id="Qn48" className="reference" href="#Q48" value="Qn48">Q-48</a>&nbsp;&nbsp;
+      <a id="Qn49" className="reference" href="#Q49" value="Qn49">Q-49</a>&nbsp;&nbsp;
+      <a id="Qn50" className="reference" href="#Q50" value="Qn50">Q-50</a>&nbsp;&nbsp;
     </nav>
     <br><br><br><br><br><br>
 
@@ -971,56 +997,56 @@
 
 
     <nav>
-      <a id="Qnd1" className="reference" href="#Q1" value="Qn1">Q-01</a>
-      <a id="Qnd2" className="reference" href="#Q2" value="Qn2">Q-02</a>
-      <a id="Qnd3" className="reference" href="#Q3" value="Qn3">Q-03</a>
-      <a id="Qnd4" className="reference" href="#Q4" value="Qn4">Q-04</a>
-      <a id="Qnd5" className="reference" href="#Q5" value="Qn5">Q-05</a>
-      <a id="Qnd6" className="reference" href="#Q6" value="Qn6">Q-06</a>
-      <a id="Qnd7" className="reference" href="#Q7" value="Qn7">Q-07</a>
-      <a id="Qnd8" className="reference" href="#Q8" value="Qn8">Q-08</a>
-      <a id="Qnd9" className="reference" href="#Q9" value="Qn9">Q-09</a>
-      <a id="Qnd10" className="reference" href="#Q10" value="Qn10">Q-10</a><br>
-      <a id="Qnd11" className="reference" href="#Q11" value="Qn11">Q-11</a>
-      <a id="Qnd12" className="reference" href="#Q12" value="Qn12">Q-12</a>
-      <a id="Qnd13" className="reference" href="#Q13" value="Qn13">Q-13</a>
-      <a id="Qnd14" className="reference" href="#Q14" value="Qn14">Q-14</a>
-      <a id="Qnd15" className="reference" href="#Q15" value="Qn15">Q-15</a>
-      <a id="Qnd16" className="reference" href="#Q16" value="Qn16">Q-16</a>
-      <a id="Qnd17" className="reference" href="#Q17" value="Qn17">Q-17</a>
-      <a id="Qnd18" className="reference" href="#Q18" value="Qn18">Q-18</a>
-      <a id="Qnd19" className="reference" href="#Q19" value="Qn19">Q-19</a>
-      <a id="Qnd20" className="reference" href="#Q20" value="Qn20">Q-20</a><br>
-      <a id="Qnd21" className="reference" href="#Q21" value="Qn21">Q-21</a>
-      <a id="Qnd22" className="reference" href="#Q22" value="Qn22">Q-22</a>
-      <a id="Qnd23" className="reference" href="#Q23" value="Qn23">Q-23</a>
-      <a id="Qnd24" className="reference" href="#Q24" value="Qn24">Q-24</a>
-      <a id="Qnd25" className="reference" href="#Q25" value="Qn25">Q-25</a>
-      <a id="Qnd26" className="reference" href="#Q26" value="Qn26">Q-26</a>
-      <a id="Qnd27" className="reference" href="#Q27" value="Qn27">Q-27</a>
-      <a id="Qnd28" className="reference" href="#Q28" value="Qn28">Q-28</a>
-      <a id="Qnd29" className="reference" href="#Q29" value="Qn29">Q-29</a>
-      <a id="Qnd30" className="reference" href="#Q30" value="Qn30">Q-30</a><br>
-      <a id="Qnd31" className="reference" href="#Q31" value="Qn31">Q-31</a>
-      <a id="Qnd32" className="reference" href="#Q32" value="Qn32">Q-32</a>
-      <a id="Qnd33" className="reference" href="#Q33" value="Qn33">Q-33</a>
-      <a id="Qnd34" className="reference" href="#Q34" value="Qn34">Q-34</a>
-      <a id="Qnd35" className="reference" href="#Q35" value="Qn35">Q-35</a>
-      <a id="Qnd36" className="reference" href="#Q36" value="Qn36">Q-36</a>
-      <a id="Qnd37" className="reference" href="#Q37" value="Qn37">Q-37</a>
-      <a id="Qnd38" className="reference" href="#Q38" value="Qn38">Q-38</a>
-      <a id="Qnd39" className="reference" href="#Q39" value="Qn39">Q-39</a>
-      <a id="Qnd40" className="reference" href="#Q40" value="Qn40">Q-40</a><br>
-      <a id="Qnd41" className="reference" href="#Q41" value="Qn41">Q-41</a>
-      <a id="Qnd42" className="reference" href="#Q42" value="Qn42">Q-42</a>
-      <a id="Qnd43" className="reference" href="#Q43" value="Qn43">Q-43</a>
-      <a id="Qnd44" className="reference" href="#Q44" value="Qn44">Q-44</a>
-      <a id="Qnd45" className="reference" href="#Q45" value="Qn45">Q-45</a>
-      <a id="Qnd46" className="reference" href="#Q46" value="Qn46">Q-46</a>
-      <a id="Qnd47" className="reference" href="#Q47" value="Qn47">Q-47</a>
-      <a id="Qnd48" className="reference" href="#Q48" value="Qn48">Q-48</a>
-      <a id="Qnd49" className="reference" href="#Q49" value="Qn49">Q-49</a>
-      <a id="Qnd50" className="reference" href="#Q50" value="Qn50">Q-50</a>
+      <a id="Qnd1" className="reference" href="#Q1" value="Qn1">Q-01</a>&nbsp;&nbsp;
+      <a id="Qnd2" className="reference" href="#Q2" value="Qn2">Q-02</a>&nbsp;&nbsp;
+      <a id="Qnd3" className="reference" href="#Q3" value="Qn3">Q-03</a>&nbsp;&nbsp;
+      <a id="Qnd4" className="reference" href="#Q4" value="Qn4">Q-04</a>&nbsp;&nbsp;
+      <a id="Qnd5" className="reference" href="#Q5" value="Qn5">Q-05</a>&nbsp;&nbsp;
+      <a id="Qnd6" className="reference" href="#Q6" value="Qn6">Q-06</a>&nbsp;&nbsp;
+      <a id="Qnd7" className="reference" href="#Q7" value="Qn7">Q-07</a>&nbsp;&nbsp;
+      <a id="Qnd8" className="reference" href="#Q8" value="Qn8">Q-08</a>&nbsp;&nbsp;
+      <a id="Qnd9" className="reference" href="#Q9" value="Qn9">Q-09</a>&nbsp;&nbsp;
+      <a id="Qnd10" className="reference" href="#Q10" value="Qn10">Q-10</a>&nbsp;&nbsp;<br><br>
+      <a id="Qnd11" className="reference" href="#Q11" value="Qn11">Q-11</a>&nbsp;&nbsp;
+      <a id="Qnd12" className="reference" href="#Q12" value="Qn12">Q-12</a>&nbsp;&nbsp;
+      <a id="Qnd13" className="reference" href="#Q13" value="Qn13">Q-13</a>&nbsp;&nbsp;
+      <a id="Qnd14" className="reference" href="#Q14" value="Qn14">Q-14</a>&nbsp;&nbsp;
+      <a id="Qnd15" className="reference" href="#Q15" value="Qn15">Q-15</a>&nbsp;&nbsp;
+      <a id="Qnd16" className="reference" href="#Q16" value="Qn16">Q-16</a>&nbsp;&nbsp;
+      <a id="Qnd17" className="reference" href="#Q17" value="Qn17">Q-17</a>&nbsp;&nbsp;
+      <a id="Qnd18" className="reference" href="#Q18" value="Qn18">Q-18</a>&nbsp;&nbsp;
+      <a id="Qnd19" className="reference" href="#Q19" value="Qn19">Q-19</a>&nbsp;&nbsp;
+      <a id="Qnd20" className="reference" href="#Q20" value="Qn20">Q-20</a>&nbsp;&nbsp;<br><br>
+      <a id="Qnd21" className="reference" href="#Q21" value="Qn21">Q-21</a>&nbsp;&nbsp;
+      <a id="Qnd22" className="reference" href="#Q22" value="Qn22">Q-22</a>&nbsp;&nbsp;
+      <a id="Qnd23" className="reference" href="#Q23" value="Qn23">Q-23</a>&nbsp;&nbsp;
+      <a id="Qnd24" className="reference" href="#Q24" value="Qn24">Q-24</a>&nbsp;&nbsp;
+      <a id="Qnd25" className="reference" href="#Q25" value="Qn25">Q-25</a>&nbsp;&nbsp;
+      <a id="Qnd26" className="reference" href="#Q26" value="Qn26">Q-26</a>&nbsp;&nbsp;
+      <a id="Qnd27" className="reference" href="#Q27" value="Qn27">Q-27</a>&nbsp;&nbsp;
+      <a id="Qnd28" className="reference" href="#Q28" value="Qn28">Q-28</a>&nbsp;&nbsp;
+      <a id="Qnd29" className="reference" href="#Q29" value="Qn29">Q-29</a>&nbsp;&nbsp;
+      <a id="Qnd30" className="reference" href="#Q30" value="Qn30">Q-30</a>&nbsp;&nbsp;<br><br>
+      <a id="Qnd31" className="reference" href="#Q31" value="Qn31">Q-31</a>&nbsp;&nbsp;
+      <a id="Qnd32" className="reference" href="#Q32" value="Qn32">Q-32</a>&nbsp;&nbsp;
+      <a id="Qnd33" className="reference" href="#Q33" value="Qn33">Q-33</a>&nbsp;&nbsp;
+      <a id="Qnd34" className="reference" href="#Q34" value="Qn34">Q-34</a>&nbsp;&nbsp;
+      <a id="Qnd35" className="reference" href="#Q35" value="Qn35">Q-35</a>&nbsp;&nbsp;
+      <a id="Qnd36" className="reference" href="#Q36" value="Qn36">Q-36</a>&nbsp;&nbsp;
+      <a id="Qnd37" className="reference" href="#Q37" value="Qn37">Q-37</a>&nbsp;&nbsp;
+      <a id="Qnd38" className="reference" href="#Q38" value="Qn38">Q-38</a>&nbsp;&nbsp;
+      <a id="Qnd39" className="reference" href="#Q39" value="Qn39">Q-39</a>&nbsp;&nbsp;
+      <a id="Qnd40" className="reference" href="#Q40" value="Qn40">Q-40</a>&nbsp;&nbsp;<br><br>
+      <a id="Qnd41" className="reference" href="#Q41" value="Qn41">Q-41</a>&nbsp;&nbsp;
+      <a id="Qnd42" className="reference" href="#Q42" value="Qn42">Q-42</a>&nbsp;&nbsp;
+      <a id="Qnd43" className="reference" href="#Q43" value="Qn43">Q-43</a>&nbsp;&nbsp;
+      <a id="Qnd44" className="reference" href="#Q44" value="Qn44">Q-44</a>&nbsp;&nbsp;
+      <a id="Qnd45" className="reference" href="#Q45" value="Qn45">Q-45</a>&nbsp;&nbsp;
+      <a id="Qnd46" className="reference" href="#Q46" value="Qn46">Q-46</a>&nbsp;&nbsp;
+      <a id="Qnd47" className="reference" href="#Q47" value="Qn47">Q-47</a>&nbsp;&nbsp;
+      <a id="Qnd48" className="reference" href="#Q48" value="Qn48">Q-48</a>&nbsp;&nbsp;
+      <a id="Qnd49" className="reference" href="#Q49" value="Qn49">Q-49</a>&nbsp;&nbsp;
+      <a id="Qnd50" className="reference" href="#Q50" value="Qn50">Q-50</a>&nbsp;&nbsp;
     </nav>
     <br><br>
     <a href="#nbme">Block list</a>
@@ -1030,56 +1056,56 @@
     <div class="block2">
       <h1 id="Block2">BLOCK 2</h1>
       <nav class="QuestionNavigation">
-        <a id="Qn51" className="reference" href="#Q51" value="Qn51">Q-51</a>
-        <a id="Qn52" className="reference" href="#Q52" value="Qn52">Q-52</a>
-        <a id="Qn53" className="reference" href="#Q53" value="Qn53">Q-53</a>
-        <a id="Qn54" className="reference" href="#Q54" value="Qn54">Q-54</a>
-        <a id="Qn55" className="reference" href="#Q55" value="Qn55">Q-55</a>
-        <a id="Qn56" className="reference" href="#Q56" value="Qn56">Q-56</a>
-        <a id="Qn57" className="reference" href="#Q57" value="Qn57">Q-57</a>
-        <a id="Qn58" className="reference" href="#Q58" value="Qn58">Q-58</a>
-        <a id="Qn59" className="reference" href="#Q59" value="Qn59">Q-59</a>
-        <a id="Qn60" className="reference" href="#Q60" value="Qn60">Q-60</a><br><br>
-        <a id="Qn61" className="reference" href="#Q61" value="Qn61">Q-61</a>
-        <a id="Qn62" className="reference" href="#Q62" value="Qn62">Q-62</a>
-        <a id="Qn63" className="reference" href="#Q63" value="Qn63">Q-63</a>
-        <a id="Qn64" className="reference" href="#Q64" value="Qn64">Q-64</a>
-        <a id="Qn65" className="reference" href="#Q65" value="Qn65">Q-65</a>
-        <a id="Qn66" className="reference" href="#Q66" value="Qn66">Q-66</a>
-        <a id="Qn67" className="reference" href="#Q67" value="Qn67">Q-67</a>
-        <a id="Qn68" className="reference" href="#Q68" value="Qn68">Q-68</a>
-        <a id="Qn69" className="reference" href="#Q69" value="Qn69">Q-69</a>
-        <a id="Qn70" className="reference" href="#Q70" value="Qn70">Q-70</a><br><br>
-        <a id="Qn71" className="reference" href="#Q71" value="Qn71">Q-71</a>
-        <a id="Qn72" className="reference" href="#Q72" value="Qn72">Q-72</a>
-        <a id="Qn73" className="reference" href="#Q73" value="Qn73">Q-73</a>
-        <a id="Qn74" className="reference" href="#Q74" value="Qn74">Q-74</a>
-        <a id="Qn75" className="reference" href="#Q75" value="Qn75">Q-75</a>
-        <a id="Qn76" className="reference" href="#Q76" value="Qn76">Q-76</a>
-        <a id="Qn77" className="reference" href="#Q77" value="Qn77">Q-77</a>
-        <a id="Qn78" className="reference" href="#Q78" value="Qn78">Q-78</a>
-        <a id="Qn79" className="reference" href="#Q79" value="Qn79">Q-79</a>
-        <a id="Qn80" className="reference" href="#Q80" value="Qn80">Q-80</a><br><br>
-        <a id="Qn81" className="reference" href="#Q81" value="Qn81">Q-81</a>
-        <a id="Qn82" className="reference" href="#Q82" value="Qn82">Q-82</a>
-        <a id="Qn83" className="reference" href="#Q83" value="Qn83">Q-83</a>
-        <a id="Qn84" className="reference" href="#Q84" value="Qn84">Q-84</a>
-        <a id="Qn85" className="reference" href="#Q85" value="Qn85">Q-85</a>
-        <a id="Qn86" className="reference" href="#Q86" value="Qn86">Q-86</a>
-        <a id="Qn87" className="reference" href="#Q87" value="Qn87">Q-87</a>
-        <a id="Qn88" className="reference" href="#Q88" value="Qn88">Q-88</a>
-        <a id="Qn89" className="reference" href="#Q89" value="Qn89">Q-89</a>
-        <a id="Qn90" className="reference" href="#Q90" value="Qn90">Q-90</a><br><br>
-        <a id="Qn91" className="reference" href="#Q91" value="Qn91">Q-91</a>
-        <a id="Qn92" className="reference" href="#Q92" value="Qn92">Q-92</a>
-        <a id="Qn93" className="reference" href="#Q93" value="Qn93">Q-93</a>
-        <a id="Qn94" className="reference" href="#Q94" value="Qn94">Q-94</a>
-        <a id="Qn95" className="reference" href="#Q95" value="Qn95">Q-95</a>
-        <a id="Qn96" className="reference" href="#Q96" value="Qn96">Q-96</a>
-        <a id="Qn97" className="reference" href="#Q97" value="Qn97">Q-97</a>
-        <a id="Qn98" className="reference" href="#Q98" value="Qn98">Q-98</a>
-        <a id="Qn99" className="reference" href="#Q99" value="Qn99">Q-99</a>
-        <a id="Qn100" className="reference" href="#Q100" value="Qn100">Q-100</a>
+        <a id="Qn51" className="reference" href="#Q51" value="Qn51">Q-51</a>&nbsp;&nbsp;
+        <a id="Qn52" className="reference" href="#Q52" value="Qn52">Q-52</a>&nbsp;&nbsp;
+        <a id="Qn53" className="reference" href="#Q53" value="Qn53">Q-53</a>&nbsp;&nbsp;
+        <a id="Qn54" className="reference" href="#Q54" value="Qn54">Q-54</a>&nbsp;&nbsp;
+        <a id="Qn55" className="reference" href="#Q55" value="Qn55">Q-55</a>&nbsp;&nbsp;
+        <a id="Qn56" className="reference" href="#Q56" value="Qn56">Q-56</a>&nbsp;&nbsp;
+        <a id="Qn57" className="reference" href="#Q57" value="Qn57">Q-57</a>&nbsp;&nbsp;
+        <a id="Qn58" className="reference" href="#Q58" value="Qn58">Q-58</a>&nbsp;&nbsp;
+        <a id="Qn59" className="reference" href="#Q59" value="Qn59">Q-59</a>&nbsp;&nbsp;
+        <a id="Qn60" className="reference" href="#Q60" value="Qn60">Q-60</a><br><br>&nbsp;&nbsp;
+        <a id="Qn61" className="reference" href="#Q61" value="Qn61">Q-61</a>&nbsp;&nbsp;
+        <a id="Qn62" className="reference" href="#Q62" value="Qn62">Q-62</a>&nbsp;&nbsp;
+        <a id="Qn63" className="reference" href="#Q63" value="Qn63">Q-63</a>&nbsp;&nbsp;
+        <a id="Qn64" className="reference" href="#Q64" value="Qn64">Q-64</a>&nbsp;&nbsp;
+        <a id="Qn65" className="reference" href="#Q65" value="Qn65">Q-65</a>&nbsp;&nbsp;
+        <a id="Qn66" className="reference" href="#Q66" value="Qn66">Q-66</a>&nbsp;&nbsp;
+        <a id="Qn67" className="reference" href="#Q67" value="Qn67">Q-67</a>&nbsp;&nbsp;
+        <a id="Qn68" className="reference" href="#Q68" value="Qn68">Q-68</a>&nbsp;&nbsp;
+        <a id="Qn69" className="reference" href="#Q69" value="Qn69">Q-69</a>&nbsp;&nbsp;
+        <a id="Qn70" className="reference" href="#Q70" value="Qn70">Q-70</a><br><br>&nbsp;&nbsp;
+        <a id="Qn71" className="reference" href="#Q71" value="Qn71">Q-71</a>&nbsp;&nbsp;
+        <a id="Qn72" className="reference" href="#Q72" value="Qn72">Q-72</a>&nbsp;&nbsp;
+        <a id="Qn73" className="reference" href="#Q73" value="Qn73">Q-73</a>&nbsp;&nbsp;
+        <a id="Qn74" className="reference" href="#Q74" value="Qn74">Q-74</a>&nbsp;&nbsp;
+        <a id="Qn75" className="reference" href="#Q75" value="Qn75">Q-75</a>&nbsp;&nbsp;
+        <a id="Qn76" className="reference" href="#Q76" value="Qn76">Q-76</a>&nbsp;&nbsp;
+        <a id="Qn77" className="reference" href="#Q77" value="Qn77">Q-77</a>&nbsp;&nbsp;
+        <a id="Qn78" className="reference" href="#Q78" value="Qn78">Q-78</a>&nbsp;&nbsp;
+        <a id="Qn79" className="reference" href="#Q79" value="Qn79">Q-79</a>&nbsp;&nbsp;
+        <a id="Qn80" className="reference" href="#Q80" value="Qn80">Q-80</a><br><br>&nbsp;&nbsp;
+        <a id="Qn81" className="reference" href="#Q81" value="Qn81">Q-81</a>&nbsp;&nbsp;
+        <a id="Qn82" className="reference" href="#Q82" value="Qn82">Q-82</a>&nbsp;&nbsp;
+        <a id="Qn83" className="reference" href="#Q83" value="Qn83">Q-83</a>&nbsp;&nbsp;
+        <a id="Qn84" className="reference" href="#Q84" value="Qn84">Q-84</a>&nbsp;&nbsp;
+        <a id="Qn85" className="reference" href="#Q85" value="Qn85">Q-85</a>&nbsp;&nbsp;
+        <a id="Qn86" className="reference" href="#Q86" value="Qn86">Q-86</a>&nbsp;&nbsp;
+        <a id="Qn87" className="reference" href="#Q87" value="Qn87">Q-87</a>&nbsp;&nbsp;
+        <a id="Qn88" className="reference" href="#Q88" value="Qn88">Q-88</a>&nbsp;&nbsp;
+        <a id="Qn89" className="reference" href="#Q89" value="Qn89">Q-89</a>&nbsp;&nbsp;
+        <a id="Qn90" className="reference" href="#Q90" value="Qn90">Q-90</a><br><br>&nbsp;&nbsp;
+        <a id="Qn91" className="reference" href="#Q91" value="Qn91">Q-91</a>&nbsp;&nbsp;
+        <a id="Qn92" className="reference" href="#Q92" value="Qn92">Q-92</a>&nbsp;&nbsp;
+        <a id="Qn93" className="reference" href="#Q93" value="Qn93">Q-93</a>&nbsp;&nbsp;
+        <a id="Qn94" className="reference" href="#Q94" value="Qn94">Q-94</a>&nbsp;&nbsp;
+        <a id="Qn95" className="reference" href="#Q95" value="Qn95">Q-95</a>&nbsp;&nbsp;
+        <a id="Qn96" className="reference" href="#Q96" value="Qn96">Q-96</a>&nbsp;&nbsp;
+        <a id="Qn97" className="reference" href="#Q97" value="Qn97">Q-97</a>&nbsp;&nbsp;
+        <a id="Qn98" className="reference" href="#Q98" value="Qn98">Q-98</a>&nbsp;&nbsp;
+        <a id="Qn99" className="reference" href="#Q99" value="Qn99">Q-99</a>&nbsp;&nbsp;
+        <a id="Qn100" className="reference" href="#Q100" value="Qn100">Q-100</a>&nbsp;&nbsp;
       </nav>
       <br><br><br><br><br><br>    
 
@@ -1896,56 +1922,56 @@
       <br><br>
 
       <nav>
-        <a id="Qnd51" className="reference" href="#Q51" value="Qn51">Q-51</a>
-        <a id="Qnd52" className="reference" href="#Q52" value="Qn52">Q-52</a>
-        <a id="Qnd53" className="reference" href="#Q53" value="Qn53">Q-53</a>
-        <a id="Qnd54" className="reference" href="#Q54" value="Qn54">Q-54</a>
-        <a id="Qnd55" className="reference" href="#Q55" value="Qn55">Q-55</a>
-        <a id="Qnd56" className="reference" href="#Q56" value="Qn56">Q-56</a>
-        <a id="Qnd57" className="reference" href="#Q57" value="Qn57">Q-57</a>
-        <a id="Qnd58" className="reference" href="#Q58" value="Qn58">Q-58</a>
-        <a id="Qnd59" className="reference" href="#Q59" value="Qn59">Q-59</a>
-        <a id="Qnd60" className="reference" href="#Q60" value="Qn60">Q-60</a><br>
-        <a id="Qnd61" className="reference" href="#Q61" value="Qn61">Q-61</a>
-        <a id="Qnd62" className="reference" href="#Q62" value="Qn62">Q-62</a>
-        <a id="Qnd63" className="reference" href="#Q63" value="Qn63">Q-63</a>
-        <a id="Qnd64" className="reference" href="#Q64" value="Qn64">Q-64</a>
-        <a id="Qnd65" className="reference" href="#Q65" value="Qn65">Q-65</a>
-        <a id="Qnd66" className="reference" href="#Q66" value="Qn66">Q-66</a>
-        <a id="Qnd67" className="reference" href="#Q67" value="Qn67">Q-67</a>
-        <a id="Qnd68" className="reference" href="#Q68" value="Qn68">Q-68</a>
-        <a id="Qnd69" className="reference" href="#Q69" value="Qn69">Q-69</a>
-        <a id="Qnd70" className="reference" href="#Q70" value="Qn70">Q-70</a><br>
-        <a id="Qnd71" className="reference" href="#Q71" value="Qn71">Q-71</a>
-        <a id="Qnd72" className="reference" href="#Q72" value="Qn72">Q-72</a>
-        <a id="Qnd73" className="reference" href="#Q73" value="Qn73">Q-73</a>
-        <a id="Qnd74" className="reference" href="#Q74" value="Qn74">Q-74</a>
-        <a id="Qnd75" className="reference" href="#Q75" value="Qn75">Q-75</a>
-        <a id="Qnd76" className="reference" href="#Q76" value="Qn76">Q-76</a>
-        <a id="Qnd77" className="reference" href="#Q77" value="Qn77">Q-77</a>
-        <a id="Qnd78" className="reference" href="#Q78" value="Qn78">Q-78</a>
-        <a id="Qnd79" className="reference" href="#Q79" value="Qn79">Q-79</a>
-        <a id="Qnd80" className="reference" href="#Q80" value="Qn80">Q-80</a><br>
-        <a id="Qnd81" className="reference" href="#Q81" value="Qn81">Q-81</a>
-        <a id="Qnd82" className="reference" href="#Q82" value="Qn82">Q-82</a>
-        <a id="Qnd83" className="reference" href="#Q83" value="Qn83">Q-83</a>
-        <a id="Qnd84" className="reference" href="#Q84" value="Qn84">Q-84</a>
-        <a id="Qnd85" className="reference" href="#Q85" value="Qn85">Q-85</a>
-        <a id="Qnd86" className="reference" href="#Q86" value="Qn86">Q-86</a>
-        <a id="Qnd87" className="reference" href="#Q87" value="Qn87">Q-87</a>
-        <a id="Qnd88" className="reference" href="#Q88" value="Qn88">Q-88</a>
-        <a id="Qnd89" className="reference" href="#Q89" value="Qn89">Q-89</a>
-        <a id="Qnd90" className="reference" href="#Q90" value="Qn40">Q-90</a><br>
-        <a id="Qnd91" className="reference" href="#Q91" value="Qn41">Q-91</a>
-        <a id="Qnd92" className="reference" href="#Q92" value="Qn42">Q-92</a>
-        <a id="Qnd93" className="reference" href="#Q93" value="Qn43">Q-93</a>
-        <a id="Qnd94" className="reference" href="#Q94" value="Qn44">Q-94</a>
-        <a id="Qnd95" className="reference" href="#Q95" value="Qn45">Q-95</a>
-        <a id="Qnd96" className="reference" href="#Q96" value="Qn46">Q-96</a>
-        <a id="Qnd97" className="reference" href="#Q97" value="Qn47">Q-97</a>
-        <a id="Qnd98" className="reference" href="#Q98" value="Qn48">Q-98</a>
-        <a id="Qnd99" className="reference" href="#Q99" value="Qn49">Q-99</a>
-        <a id="Qnd100" className="reference" href="#Q100" value="Qn100">Q-100</a>
+        <a id="Qnd51" className="reference" href="#Q51" value="Qn51">Q-51</a>&nbsp;&nbsp;
+        <a id="Qnd52" className="reference" href="#Q52" value="Qn52">Q-52</a>&nbsp;&nbsp;
+        <a id="Qnd53" className="reference" href="#Q53" value="Qn53">Q-53</a>&nbsp;&nbsp;
+        <a id="Qnd54" className="reference" href="#Q54" value="Qn54">Q-54</a>&nbsp;&nbsp;
+        <a id="Qnd55" className="reference" href="#Q55" value="Qn55">Q-55</a>&nbsp;&nbsp;
+        <a id="Qnd56" className="reference" href="#Q56" value="Qn56">Q-56</a>&nbsp;&nbsp;
+        <a id="Qnd57" className="reference" href="#Q57" value="Qn57">Q-57</a>&nbsp;&nbsp;
+        <a id="Qnd58" className="reference" href="#Q58" value="Qn58">Q-58</a>&nbsp;&nbsp;
+        <a id="Qnd59" className="reference" href="#Q59" value="Qn59">Q-59</a>&nbsp;&nbsp;
+        <a id="Qnd60" className="reference" href="#Q60" value="Qn60">Q-60</a>&nbsp;&nbsp;<br><br>
+        <a id="Qnd61" className="reference" href="#Q61" value="Qn61">Q-61</a>&nbsp;&nbsp;
+        <a id="Qnd62" className="reference" href="#Q62" value="Qn62">Q-62</a>&nbsp;&nbsp;
+        <a id="Qnd63" className="reference" href="#Q63" value="Qn63">Q-63</a>&nbsp;&nbsp;
+        <a id="Qnd64" className="reference" href="#Q64" value="Qn64">Q-64</a>&nbsp;&nbsp;
+        <a id="Qnd65" className="reference" href="#Q65" value="Qn65">Q-65</a>&nbsp;&nbsp;
+        <a id="Qnd66" className="reference" href="#Q66" value="Qn66">Q-66</a>&nbsp;&nbsp;
+        <a id="Qnd67" className="reference" href="#Q67" value="Qn67">Q-67</a>&nbsp;&nbsp;
+        <a id="Qnd68" className="reference" href="#Q68" value="Qn68">Q-68</a>&nbsp;&nbsp;
+        <a id="Qnd69" className="reference" href="#Q69" value="Qn69">Q-69</a>&nbsp;&nbsp;
+        <a id="Qnd70" className="reference" href="#Q70" value="Qn70">Q-70</a>&nbsp;&nbsp;<br><br>
+        <a id="Qnd71" className="reference" href="#Q71" value="Qn71">Q-71</a>&nbsp;&nbsp;
+        <a id="Qnd72" className="reference" href="#Q72" value="Qn72">Q-72</a>&nbsp;&nbsp;
+        <a id="Qnd73" className="reference" href="#Q73" value="Qn73">Q-73</a>&nbsp;&nbsp;
+        <a id="Qnd74" className="reference" href="#Q74" value="Qn74">Q-74</a>&nbsp;&nbsp;
+        <a id="Qnd75" className="reference" href="#Q75" value="Qn75">Q-75</a>&nbsp;&nbsp;
+        <a id="Qnd76" className="reference" href="#Q76" value="Qn76">Q-76</a>&nbsp;&nbsp;
+        <a id="Qnd77" className="reference" href="#Q77" value="Qn77">Q-77</a>&nbsp;&nbsp;
+        <a id="Qnd78" className="reference" href="#Q78" value="Qn78">Q-78</a>&nbsp;&nbsp;
+        <a id="Qnd79" className="reference" href="#Q79" value="Qn79">Q-79</a>&nbsp;&nbsp;
+        <a id="Qnd80" className="reference" href="#Q80" value="Qn80">Q-80</a>&nbsp;&nbsp;<br><br>
+        <a id="Qnd81" className="reference" href="#Q81" value="Qn81">Q-81</a>&nbsp;&nbsp;
+        <a id="Qnd82" className="reference" href="#Q82" value="Qn82">Q-82</a>&nbsp;&nbsp;
+        <a id="Qnd83" className="reference" href="#Q83" value="Qn83">Q-83</a>&nbsp;&nbsp;
+        <a id="Qnd84" className="reference" href="#Q84" value="Qn84">Q-84</a>&nbsp;&nbsp;
+        <a id="Qnd85" className="reference" href="#Q85" value="Qn85">Q-85</a>&nbsp;&nbsp;
+        <a id="Qnd86" className="reference" href="#Q86" value="Qn86">Q-86</a>&nbsp;&nbsp;
+        <a id="Qnd87" className="reference" href="#Q87" value="Qn87">Q-87</a>&nbsp;&nbsp;
+        <a id="Qnd88" className="reference" href="#Q88" value="Qn88">Q-88</a>&nbsp;&nbsp;
+        <a id="Qnd89" className="reference" href="#Q89" value="Qn89">Q-89</a>&nbsp;&nbsp;
+        <a id="Qnd90" className="reference" href="#Q90" value="Qn40">Q-90</a>&nbsp;&nbsp;<br><br>
+        <a id="Qnd91" className="reference" href="#Q91" value="Qn41">Q-91</a>&nbsp;&nbsp;
+        <a id="Qnd92" className="reference" href="#Q92" value="Qn42">Q-92</a>&nbsp;&nbsp;
+        <a id="Qnd93" className="reference" href="#Q93" value="Qn43">Q-93</a>&nbsp;&nbsp;
+        <a id="Qnd94" className="reference" href="#Q94" value="Qn44">Q-94</a>&nbsp;&nbsp;
+        <a id="Qnd95" className="reference" href="#Q95" value="Qn45">Q-95</a>&nbsp;&nbsp;
+        <a id="Qnd96" className="reference" href="#Q96" value="Qn46">Q-96</a>&nbsp;&nbsp;
+        <a id="Qnd97" className="reference" href="#Q97" value="Qn47">Q-97</a>&nbsp;&nbsp;
+        <a id="Qnd98" className="reference" href="#Q98" value="Qn48">Q-98</a>&nbsp;&nbsp;
+        <a id="Qnd99" className="reference" href="#Q99" value="Qn49">Q-99</a>&nbsp;&nbsp;
+        <a id="Qnd100" className="reference" href="#Q100" value="Qn100">Q-100</a>&nbsp;&nbsp;
       </nav>
       <br><br>
       <a href="#nbme">Block list</a>
@@ -1956,56 +1982,56 @@
       <h1 id="Block3">BLOCK 3</h1>
       <br>
       <nav class="QuestionNavigation">
-        <a id="Qn101" className="reference" href="#Q101" value="Qn101">Q-101</a>
-        <a id="Qn102" className="reference" href="#Q102" value="Qn102">Q-102</a>
-        <a id="Qn103" className="reference" href="#Q103" value="Qn103">Q-103</a>
-        <a id="Qn104" className="reference" href="#Q104" value="Qn104">Q-104</a>
-        <a id="Qn105" className="reference" href="#Q105" value="Qn105">Q-105</a>
-        <a id="Qn106" className="reference" href="#Q106" value="Qn106">Q-106</a>
-        <a id="Qn107" className="reference" href="#Q107" value="Qn107">Q-107</a>
-        <a id="Qn108" className="reference" href="#Q108" value="Qn108">Q-108</a>
-        <a id="Qn109" className="reference" href="#Q109" value="Qn109">Q-109</a>
-        <a id="Qn110" className="reference" href="#Q110" value="Qn110">Q-110</a><br><br>
-        <a id="Qn111" className="reference" href="#Q111" value="Qn111">Q-111</a>
-        <a id="Qn112" className="reference" href="#Q112" value="Qn112">Q-112</a>
-        <a id="Qn113" className="reference" href="#Q113" value="Qn113">Q-113</a>
-        <a id="Qn114" className="reference" href="#Q114" value="Qn114">Q-114</a>
-        <a id="Qn115" className="reference" href="#Q115" value="Qn115">Q-115</a>
-        <a id="Qn116" className="reference" href="#Q116" value="Qn116">Q-116</a>
-        <a id="Qn117" className="reference" href="#Q117" value="Qn117">Q-117</a>
-        <a id="Qn118" className="reference" href="#Q118" value="Qn118">Q-118</a>
-        <a id="Qn119" className="reference" href="#Q119" value="Qn119">Q-119</a>
-        <a id="Qn120" className="reference" href="#Q120" value="Qn120">Q-120</a><br><br>
-        <a id="Qn121" className="reference" href="#Q121" value="Qn121">Q-121</a>
-        <a id="Qn122" className="reference" href="#Q122" value="Qn122">Q-122</a>
-        <a id="Qn123" className="reference" href="#Q123" value="Qn123">Q-123</a>
-        <a id="Qn124" className="reference" href="#Q124" value="Qn124">Q-124</a>
-        <a id="Qn125" className="reference" href="#Q125" value="Qn125">Q-125</a>
-        <a id="Qn126" className="reference" href="#Q126" value="Qn126">Q-126</a>
-        <a id="Qn127" className="reference" href="#Q127" value="Qn127">Q-127</a>
-        <a id="Qn128" className="reference" href="#Q128" value="Qn128">Q-128</a>
-        <a id="Qn129" className="reference" href="#Q129" value="Qn129">Q-129</a>
-        <a id="Qn130" className="reference" href="#Q130" value="Qn130">Q-130</a><br><br>
-        <a id="Qn131" className="reference" href="#Q131" value="Qn131">Q-131</a>
-        <a id="Qn132" className="reference" href="#Q132" value="Qn132">Q-132</a>
-        <a id="Qn133" className="reference" href="#Q133" value="Qn133">Q-133</a>
-        <a id="Qn134" className="reference" href="#Q134" value="Qn134">Q-134</a>
-        <a id="Qn135" className="reference" href="#Q135" value="Qn135">Q-135</a>
-        <a id="Qn136" className="reference" href="#Q136" value="Qn136">Q-136</a>
-        <a id="Qn137" className="reference" href="#Q137" value="Qn137">Q-137</a>
-        <a id="Qn138" className="reference" href="#Q138" value="Qn138">Q-138</a>
-        <a id="Qn139" className="reference" href="#Q139" value="Qn139">Q-139</a>
-        <a id="Qn140" className="reference" href="#Q140" value="Qn140">Q-140</a><br><br>
-        <a id="Qn141" className="reference" href="#Q141" value="Qn141">Q-141</a>
-        <a id="Qn142" className="reference" href="#Q142" value="Qn142">Q-142</a>
-        <a id="Qn143" className="reference" href="#Q143" value="Qn143">Q-143</a>
-        <a id="Qn144" className="reference" href="#Q144" value="Qn144">Q-144</a>
-        <a id="Qn145" className="reference" href="#Q145" value="Qn145">Q-145</a>
-        <a id="Qn146" className="reference" href="#Q146" value="Qn146">Q-146</a>
-        <a id="Qn147" className="reference" href="#Q147" value="Qn147">Q-147</a>
-        <a id="Qn148" className="reference" href="#Q148" value="Qn148">Q-148</a>
-        <a id="Qn149" className="reference" href="#Q149" value="Qn149">Q-149</a>
-        <a id="Qn150" className="reference" href="#Q150" value="Qn150">Q-150</a>
+        <a id="Qn101" className="reference" href="#Q101" value="Qn101">Q-101</a>&nbsp;&nbsp;
+        <a id="Qn102" className="reference" href="#Q102" value="Qn102">Q-102</a>&nbsp;&nbsp;
+        <a id="Qn103" className="reference" href="#Q103" value="Qn103">Q-103</a>&nbsp;&nbsp;
+        <a id="Qn104" className="reference" href="#Q104" value="Qn104">Q-104</a>&nbsp;&nbsp;
+        <a id="Qn105" className="reference" href="#Q105" value="Qn105">Q-105</a>&nbsp;&nbsp;
+        <a id="Qn106" className="reference" href="#Q106" value="Qn106">Q-106</a>&nbsp;&nbsp;
+        <a id="Qn107" className="reference" href="#Q107" value="Qn107">Q-107</a>&nbsp;&nbsp;
+        <a id="Qn108" className="reference" href="#Q108" value="Qn108">Q-108</a>&nbsp;&nbsp;
+        <a id="Qn109" className="reference" href="#Q109" value="Qn109">Q-109</a>&nbsp;&nbsp;
+        <a id="Qn110" className="reference" href="#Q110" value="Qn110">Q-110</a><br><br>&nbsp;&nbsp;
+        <a id="Qn111" className="reference" href="#Q111" value="Qn111">Q-111</a>&nbsp;&nbsp;
+        <a id="Qn112" className="reference" href="#Q112" value="Qn112">Q-112</a>&nbsp;&nbsp;
+        <a id="Qn113" className="reference" href="#Q113" value="Qn113">Q-113</a>&nbsp;&nbsp;
+        <a id="Qn114" className="reference" href="#Q114" value="Qn114">Q-114</a>&nbsp;&nbsp;
+        <a id="Qn115" className="reference" href="#Q115" value="Qn115">Q-115</a>&nbsp;&nbsp;
+        <a id="Qn116" className="reference" href="#Q116" value="Qn116">Q-116</a>&nbsp;&nbsp;
+        <a id="Qn117" className="reference" href="#Q117" value="Qn117">Q-117</a>&nbsp;&nbsp;
+        <a id="Qn118" className="reference" href="#Q118" value="Qn118">Q-118</a>&nbsp;&nbsp;
+        <a id="Qn119" className="reference" href="#Q119" value="Qn119">Q-119</a>&nbsp;&nbsp;
+        <a id="Qn120" className="reference" href="#Q120" value="Qn120">Q-120</a><br><br>&nbsp;&nbsp;
+        <a id="Qn121" className="reference" href="#Q121" value="Qn121">Q-121</a>&nbsp;&nbsp;
+        <a id="Qn122" className="reference" href="#Q122" value="Qn122">Q-122</a>&nbsp;&nbsp;
+        <a id="Qn123" className="reference" href="#Q123" value="Qn123">Q-123</a>&nbsp;&nbsp;
+        <a id="Qn124" className="reference" href="#Q124" value="Qn124">Q-124</a>&nbsp;&nbsp;
+        <a id="Qn125" className="reference" href="#Q125" value="Qn125">Q-125</a>&nbsp;&nbsp;
+        <a id="Qn126" className="reference" href="#Q126" value="Qn126">Q-126</a>&nbsp;&nbsp;
+        <a id="Qn127" className="reference" href="#Q127" value="Qn127">Q-127</a>&nbsp;&nbsp;
+        <a id="Qn128" className="reference" href="#Q128" value="Qn128">Q-128</a>&nbsp;&nbsp;
+        <a id="Qn129" className="reference" href="#Q129" value="Qn129">Q-129</a>&nbsp;&nbsp;
+        <a id="Qn130" className="reference" href="#Q130" value="Qn130">Q-130</a><br><br>&nbsp;&nbsp;
+        <a id="Qn131" className="reference" href="#Q131" value="Qn131">Q-131</a>&nbsp;&nbsp;
+        <a id="Qn132" className="reference" href="#Q132" value="Qn132">Q-132</a>&nbsp;&nbsp;
+        <a id="Qn133" className="reference" href="#Q133" value="Qn133">Q-133</a>&nbsp;&nbsp;
+        <a id="Qn134" className="reference" href="#Q134" value="Qn134">Q-134</a>&nbsp;&nbsp;
+        <a id="Qn135" className="reference" href="#Q135" value="Qn135">Q-135</a>&nbsp;&nbsp;
+        <a id="Qn136" className="reference" href="#Q136" value="Qn136">Q-136</a>&nbsp;&nbsp;
+        <a id="Qn137" className="reference" href="#Q137" value="Qn137">Q-137</a>&nbsp;&nbsp;
+        <a id="Qn138" className="reference" href="#Q138" value="Qn138">Q-138</a>&nbsp;&nbsp;
+        <a id="Qn139" className="reference" href="#Q139" value="Qn139">Q-139</a>&nbsp;&nbsp;
+        <a id="Qn140" className="reference" href="#Q140" value="Qn140">Q-140</a><br><br>&nbsp;&nbsp;
+        <a id="Qn141" className="reference" href="#Q141" value="Qn141">Q-141</a>&nbsp;&nbsp;
+        <a id="Qn142" className="reference" href="#Q142" value="Qn142">Q-142</a>&nbsp;&nbsp;
+        <a id="Qn143" className="reference" href="#Q143" value="Qn143">Q-143</a>&nbsp;&nbsp;
+        <a id="Qn144" className="reference" href="#Q144" value="Qn144">Q-144</a>&nbsp;&nbsp;
+        <a id="Qn145" className="reference" href="#Q145" value="Qn145">Q-145</a>&nbsp;&nbsp;
+        <a id="Qn146" className="reference" href="#Q146" value="Qn146">Q-146</a>&nbsp;&nbsp;
+        <a id="Qn147" className="reference" href="#Q147" value="Qn147">Q-147</a>&nbsp;&nbsp;
+        <a id="Qn148" className="reference" href="#Q148" value="Qn148">Q-148</a>&nbsp;&nbsp;
+        <a id="Qn149" className="reference" href="#Q149" value="Qn149">Q-149</a>&nbsp;&nbsp;
+        <a id="Qn150" className="reference" href="#Q150" value="Qn150">Q-150</a>&nbsp;&nbsp;
       </nav>
       <br><br><br><br><br><br>
 
@@ -2818,56 +2844,56 @@
 
 
       <nav>
-        <a id="Qnd101" className="reference" href="#Q101" value="Qn101">Q-101</a>
-        <a id="Qnd102" className="reference" href="#Q102" value="Qn102">Q-102</a>
-        <a id="Qnd103" className="reference" href="#Q103" value="Qn103">Q-103</a>
-        <a id="Qnd104" className="reference" href="#Q104" value="Qn104">Q-104</a>
-        <a id="Qnd105" className="reference" href="#Q105" value="Qn105">Q-105</a>
-        <a id="Qnd106" className="reference" href="#Q106" value="Qn106">Q-106</a>
-        <a id="Qnd107" className="reference" href="#Q107" value="Qn107">Q-107</a>
-        <a id="Qnd108" className="reference" href="#Q108" value="Qn108">Q-108</a>
-        <a id="Qnd109" className="reference" href="#Q109" value="Qn109">Q-109</a>
-        <a id="Qnd110" className="reference" href="#Q110" value="Qn110">Q-110</a><br>
-        <a id="Qnd111" className="reference" href="#Q111" value="Qn111">Q-111</a>
-        <a id="Qnd112" className="reference" href="#Q112" value="Qn112">Q-112</a>
-        <a id="Qnd113" className="reference" href="#Q113" value="Qn113">Q-113</a>
-        <a id="Qnd114" className="reference" href="#Q114" value="Qn114">Q-114</a>
-        <a id="Qnd115" className="reference" href="#Q115" value="Qn115">Q-115</a>
-        <a id="Qnd116" className="reference" href="#Q116" value="Qn116">Q-116</a>
-        <a id="Qnd117" className="reference" href="#Q117" value="Qn117">Q-117</a>
-        <a id="Qnd118" className="reference" href="#Q118" value="Qn118">Q-118</a>
-        <a id="Qnd119" className="reference" href="#Q119" value="Qn119">Q-119</a>
-        <a id="Qnd120" className="reference" href="#Q120" value="Qn120">Q-120</a><br>
-        <a id="Qnd121" className="reference" href="#Q121" value="Qn121">Q-121</a>
-        <a id="Qnd122" className="reference" href="#Q122" value="Qn122">Q-122</a>
-        <a id="Qnd123" className="reference" href="#Q123" value="Qn123">Q-123</a>
-        <a id="Qnd124" className="reference" href="#Q124" value="Qn124">Q-124</a>
-        <a id="Qnd125" className="reference" href="#Q125" value="Qn125">Q-125</a>
-        <a id="Qnd126" className="reference" href="#Q126" value="Qn126">Q-126</a>
-        <a id="Qnd127" className="reference" href="#Q127" value="Qn127">Q-127</a>
-        <a id="Qnd128" className="reference" href="#Q128" value="Qn128">Q-128</a>
-        <a id="Qnd129" className="reference" href="#Q129" value="Qn129">Q-129</a>
-        <a id="Qnd130" className="reference" href="#Q130" value="Qn130">Q-130</a><br>
-        <a id="Qnd131" className="reference" href="#Q131" value="Qn131">Q-131</a>
-        <a id="Qnd132" className="reference" href="#Q132" value="Qn132">Q-132</a>
-        <a id="Qnd133" className="reference" href="#Q133" value="Qn133">Q-133</a>
-        <a id="Qnd134" className="reference" href="#Q134" value="Qn134">Q-134</a>
-        <a id="Qnd135" className="reference" href="#Q135" value="Qn135">Q-135</a>
-        <a id="Qnd136" className="reference" href="#Q136" value="Qn136">Q-136</a>
-        <a id="Qnd137" className="reference" href="#Q137" value="Qn137">Q-137</a>
-        <a id="Qnd138" className="reference" href="#Q138" value="Qn138">Q-138</a>
-        <a id="Qnd139" className="reference" href="#Q139" value="Qn139">Q-139</a>
-        <a id="Qnd140" className="reference" href="#Q140" value="Qn140">Q-140</a><br>
-        <a id="Qnd141" className="reference" href="#Q141" value="Qn141">Q-141</a>
-        <a id="Qnd142" className="reference" href="#Q142" value="Qn142">Q-142</a>
-        <a id="Qnd143" className="reference" href="#Q143" value="Qn143">Q-143</a>
-        <a id="Qnd144" className="reference" href="#Q144" value="Qn144">Q-144</a>
-        <a id="Qnd145" className="reference" href="#Q145" value="Qn145">Q-145</a>
-        <a id="Qnd146" className="reference" href="#Q146" value="Qn146">Q-146</a>
-        <a id="Qnd147" className="reference" href="#Q147" value="Qn147">Q-147</a>
-        <a id="Qnd148" className="reference" href="#Q148" value="Qn148">Q-148</a>
-        <a id="Qnd149" className="reference" href="#Q149" value="Qn149">Q-149</a>
-        <a id="Qnd150" className="reference" href="#Q150" value="Qn150">Q-150</a>
+        <a id="Qnd101" className="reference" href="#Q101" value="Qn101">Q-101</a>&nbsp;&nbsp;
+        <a id="Qnd102" className="reference" href="#Q102" value="Qn102">Q-102</a>&nbsp;&nbsp;
+        <a id="Qnd103" className="reference" href="#Q103" value="Qn103">Q-103</a>&nbsp;&nbsp;
+        <a id="Qnd104" className="reference" href="#Q104" value="Qn104">Q-104</a>&nbsp;&nbsp;
+        <a id="Qnd105" className="reference" href="#Q105" value="Qn105">Q-105</a>&nbsp;&nbsp;
+        <a id="Qnd106" className="reference" href="#Q106" value="Qn106">Q-106</a>&nbsp;&nbsp;
+        <a id="Qnd107" className="reference" href="#Q107" value="Qn107">Q-107</a>&nbsp;&nbsp;
+        <a id="Qnd108" className="reference" href="#Q108" value="Qn108">Q-108</a>&nbsp;&nbsp;
+        <a id="Qnd109" className="reference" href="#Q109" value="Qn109">Q-109</a>&nbsp;&nbsp;
+        <a id="Qnd110" className="reference" href="#Q110" value="Qn110">Q-110</a>&nbsp;&nbsp;<br><br>
+        <a id="Qnd111" className="reference" href="#Q111" value="Qn111">Q-111</a>&nbsp;&nbsp;
+        <a id="Qnd112" className="reference" href="#Q112" value="Qn112">Q-112</a>&nbsp;&nbsp;
+        <a id="Qnd113" className="reference" href="#Q113" value="Qn113">Q-113</a>&nbsp;&nbsp;
+        <a id="Qnd114" className="reference" href="#Q114" value="Qn114">Q-114</a>&nbsp;&nbsp;
+        <a id="Qnd115" className="reference" href="#Q115" value="Qn115">Q-115</a>&nbsp;&nbsp;
+        <a id="Qnd116" className="reference" href="#Q116" value="Qn116">Q-116</a>&nbsp;&nbsp;
+        <a id="Qnd117" className="reference" href="#Q117" value="Qn117">Q-117</a>&nbsp;&nbsp;
+        <a id="Qnd118" className="reference" href="#Q118" value="Qn118">Q-118</a>&nbsp;&nbsp;
+        <a id="Qnd119" className="reference" href="#Q119" value="Qn119">Q-119</a>&nbsp;&nbsp;
+        <a id="Qnd120" className="reference" href="#Q120" value="Qn120">Q-120</a>&nbsp;&nbsp;<br><br>
+        <a id="Qnd121" className="reference" href="#Q121" value="Qn121">Q-121</a>&nbsp;&nbsp;
+        <a id="Qnd122" className="reference" href="#Q122" value="Qn122">Q-122</a>&nbsp;&nbsp;
+        <a id="Qnd123" className="reference" href="#Q123" value="Qn123">Q-123</a>&nbsp;&nbsp;
+        <a id="Qnd124" className="reference" href="#Q124" value="Qn124">Q-124</a>&nbsp;&nbsp;
+        <a id="Qnd125" className="reference" href="#Q125" value="Qn125">Q-125</a>&nbsp;&nbsp;
+        <a id="Qnd126" className="reference" href="#Q126" value="Qn126">Q-126</a>&nbsp;&nbsp;
+        <a id="Qnd127" className="reference" href="#Q127" value="Qn127">Q-127</a>&nbsp;&nbsp;
+        <a id="Qnd128" className="reference" href="#Q128" value="Qn128">Q-128</a>&nbsp;&nbsp;
+        <a id="Qnd129" className="reference" href="#Q129" value="Qn129">Q-129</a>&nbsp;&nbsp;
+        <a id="Qnd130" className="reference" href="#Q130" value="Qn130">Q-130</a>&nbsp;&nbsp;<br><br>
+        <a id="Qnd131" className="reference" href="#Q131" value="Qn131">Q-131</a>&nbsp;&nbsp;
+        <a id="Qnd132" className="reference" href="#Q132" value="Qn132">Q-132</a>&nbsp;&nbsp;
+        <a id="Qnd133" className="reference" href="#Q133" value="Qn133">Q-133</a>&nbsp;&nbsp;
+        <a id="Qnd134" className="reference" href="#Q134" value="Qn134">Q-134</a>&nbsp;&nbsp;
+        <a id="Qnd135" className="reference" href="#Q135" value="Qn135">Q-135</a>&nbsp;&nbsp;
+        <a id="Qnd136" className="reference" href="#Q136" value="Qn136">Q-136</a>&nbsp;&nbsp;
+        <a id="Qnd137" className="reference" href="#Q137" value="Qn137">Q-137</a>&nbsp;&nbsp;
+        <a id="Qnd138" className="reference" href="#Q138" value="Qn138">Q-138</a>&nbsp;&nbsp;
+        <a id="Qnd139" className="reference" href="#Q139" value="Qn139">Q-139</a>&nbsp;&nbsp;
+        <a id="Qnd140" className="reference" href="#Q140" value="Qn140">Q-140</a>&nbsp;&nbsp;<br><br>
+        <a id="Qnd141" className="reference" href="#Q141" value="Qn141">Q-141</a>&nbsp;&nbsp;
+        <a id="Qnd142" className="reference" href="#Q142" value="Qn142">Q-142</a>&nbsp;&nbsp;
+        <a id="Qnd143" className="reference" href="#Q143" value="Qn143">Q-143</a>&nbsp;&nbsp;
+        <a id="Qnd144" className="reference" href="#Q144" value="Qn144">Q-144</a>&nbsp;&nbsp;
+        <a id="Qnd145" className="reference" href="#Q145" value="Qn145">Q-145</a>&nbsp;&nbsp;
+        <a id="Qnd146" className="reference" href="#Q146" value="Qn146">Q-146</a>&nbsp;&nbsp;
+        <a id="Qnd147" className="reference" href="#Q147" value="Qn147">Q-147</a>&nbsp;&nbsp;
+        <a id="Qnd148" className="reference" href="#Q148" value="Qn148">Q-148</a>&nbsp;&nbsp;
+        <a id="Qnd149" className="reference" href="#Q149" value="Qn149">Q-149</a>&nbsp;&nbsp;
+        <a id="Qnd150" className="reference" href="#Q150" value="Qn150">Q-150</a>&nbsp;&nbsp;
       </nav>
       <br><br>
       <a href="#nbme">Block list</a>
@@ -2877,56 +2903,56 @@
     <div class="block4">
       <h1 id="Block4">BLOCK 4</h1>
       <nav class="QuestionNavigation">
-        <a id="Qn151" className="reference" href="#Q151" value="Qn151">Q-151</a>
-        <a id="Qn152" className="reference" href="#Q152" value="Qn152">Q-152</a>
-        <a id="Qn153" className="reference" href="#Q153" value="Qn153">Q-153</a>
-        <a id="Qn154" className="reference" href="#Q154" value="Qn154">Q-154</a>
-        <a id="Qn155" className="reference" href="#Q155" value="Qn155">Q-155</a>
-        <a id="Qn156" className="reference" href="#Q156" value="Qn156">Q-156</a>
-        <a id="Qn157" className="reference" href="#Q157" value="Qn157">Q-157</a>
-        <a id="Qn158" className="reference" href="#Q158" value="Qn158">Q-158</a>
-        <a id="Qn159" className="reference" href="#Q159" value="Qn159">Q-159</a>
-        <a id="Qn160" className="reference" href="#Q160" value="Qn160">Q-160</a><br><br>
-        <a id="Qn161" className="reference" href="#Q161" value="Qn161">Q-161</a>
-        <a id="Qn162" className="reference" href="#Q162" value="Qn162">Q-162</a>
-        <a id="Qn163" className="reference" href="#Q163" value="Qn163">Q-163</a>
-        <a id="Qn164" className="reference" href="#Q164" value="Qn164">Q-164</a>
-        <a id="Qn165" className="reference" href="#Q165" value="Qn165">Q-165</a>
-        <a id="Qn166" className="reference" href="#Q166" value="Qn166">Q-166</a>
-        <a id="Qn167" className="reference" href="#Q167" value="Qn167">Q-167</a>
-        <a id="Qn168" className="reference" href="#Q168" value="Qn168">Q-168</a>
-        <a id="Qn169" className="reference" href="#Q169" value="Qn169">Q-169</a>
-        <a id="Qn170" className="reference" href="#Q170" value="Qn170">Q-170</a><br><br>
-        <a id="Qn171" className="reference" href="#Q171" value="Qn171">Q-171</a>
-        <a id="Qn172" className="reference" href="#Q172" value="Qn172">Q-172</a>
-        <a id="Qn173" className="reference" href="#Q173" value="Qn173">Q-173</a>
-        <a id="Qn174" className="reference" href="#Q174" value="Qn174">Q-174</a>
-        <a id="Qn175" className="reference" href="#Q175" value="Qn175">Q-175</a>
-        <a id="Qn176" className="reference" href="#Q176" value="Qn176">Q-176</a>
-        <a id="Qn177" className="reference" href="#Q177" value="Qn177">Q-177</a>
-        <a id="Qn178" className="reference" href="#Q178" value="Qn178">Q-178</a>
-        <a id="Qn179" className="reference" href="#Q179" value="Qn179">Q-179</a>
-        <a id="Qn180" className="reference" href="#Q180" value="Qn180">Q-180</a><br><br>
-        <a id="Qn181" className="reference" href="#Q181" value="Qn181">Q-181</a>
-        <a id="Qn182" className="reference" href="#Q182" value="Qn182">Q-182</a>
-        <a id="Qn183" className="reference" href="#Q183" value="Qn183">Q-183</a>
-        <a id="Qn184" className="reference" href="#Q184" value="Qn184">Q-184</a>
-        <a id="Qn185" className="reference" href="#Q185" value="Qn185">Q-185</a>
-        <a id="Qn186" className="reference" href="#Q186" value="Qn186">Q-186</a>
-        <a id="Qn187" className="reference" href="#Q187" value="Qn187">Q-187</a>
-        <a id="Qn188" className="reference" href="#Q188" value="Qn188">Q-188</a>
-        <a id="Qn189" className="reference" href="#Q189" value="Qn189">Q-189</a>
-        <a id="Qn190" className="reference" href="#Q190" value="Qn190">Q-190</a><br><br>
-        <a id="Qn191" className="reference" href="#Q191" value="Qn191">Q-191</a>
-        <a id="Qn192" className="reference" href="#Q192" value="Qn192">Q-192</a>
-        <a id="Qn193" className="reference" href="#Q193" value="Qn193">Q-193</a>
-        <a id="Qn194" className="reference" href="#Q194" value="Qn194">Q-194</a>
-        <a id="Qn195" className="reference" href="#Q195" value="Qn195">Q-195</a>
-        <a id="Qn196" className="reference" href="#Q196" value="Qn196">Q-196</a>
-        <a id="Qn197" className="reference" href="#Q197" value="Qn197">Q-197</a>
-        <a id="Qn198" className="reference" href="#Q198" value="Qn198">Q-198</a>
-        <a id="Qn199" className="reference" href="#Q199" value="Qn199">Q-199</a>
-        <a id="Qn200" className="reference" href="#Q200" value="Qn100">Q-200</a>
+        <a id="Qn151" className="reference" href="#Q151" value="Qn151">Q-151</a>&nbsp;&nbsp;
+        <a id="Qn152" className="reference" href="#Q152" value="Qn152">Q-152</a>&nbsp;&nbsp;
+        <a id="Qn153" className="reference" href="#Q153" value="Qn153">Q-153</a>&nbsp;&nbsp;
+        <a id="Qn154" className="reference" href="#Q154" value="Qn154">Q-154</a>&nbsp;&nbsp;
+        <a id="Qn155" className="reference" href="#Q155" value="Qn155">Q-155</a>&nbsp;&nbsp;
+        <a id="Qn156" className="reference" href="#Q156" value="Qn156">Q-156</a>&nbsp;&nbsp;
+        <a id="Qn157" className="reference" href="#Q157" value="Qn157">Q-157</a>&nbsp;&nbsp;
+        <a id="Qn158" className="reference" href="#Q158" value="Qn158">Q-158</a>&nbsp;&nbsp;
+        <a id="Qn159" className="reference" href="#Q159" value="Qn159">Q-159</a>&nbsp;&nbsp;
+        <a id="Qn160" className="reference" href="#Q160" value="Qn160">Q-160</a>&nbsp;&nbsp;<br><br>
+        <a id="Qn161" className="reference" href="#Q161" value="Qn161">Q-161</a>&nbsp;&nbsp;
+        <a id="Qn162" className="reference" href="#Q162" value="Qn162">Q-162</a>&nbsp;&nbsp;
+        <a id="Qn163" className="reference" href="#Q163" value="Qn163">Q-163</a>&nbsp;&nbsp;
+        <a id="Qn164" className="reference" href="#Q164" value="Qn164">Q-164</a>&nbsp;&nbsp;
+        <a id="Qn165" className="reference" href="#Q165" value="Qn165">Q-165</a>&nbsp;&nbsp;
+        <a id="Qn166" className="reference" href="#Q166" value="Qn166">Q-166</a>&nbsp;&nbsp;
+        <a id="Qn167" className="reference" href="#Q167" value="Qn167">Q-167</a>&nbsp;&nbsp;
+        <a id="Qn168" className="reference" href="#Q168" value="Qn168">Q-168</a>&nbsp;&nbsp;
+        <a id="Qn169" className="reference" href="#Q169" value="Qn169">Q-169</a>&nbsp;&nbsp;
+        <a id="Qn170" className="reference" href="#Q170" value="Qn170">Q-170</a>&nbsp;&nbsp;<br><br>
+        <a id="Qn171" className="reference" href="#Q171" value="Qn171">Q-171</a>&nbsp;&nbsp;
+        <a id="Qn172" className="reference" href="#Q172" value="Qn172">Q-172</a>&nbsp;&nbsp;
+        <a id="Qn173" className="reference" href="#Q173" value="Qn173">Q-173</a>&nbsp;&nbsp;
+        <a id="Qn174" className="reference" href="#Q174" value="Qn174">Q-174</a>&nbsp;&nbsp;
+        <a id="Qn175" className="reference" href="#Q175" value="Qn175">Q-175</a>&nbsp;&nbsp;
+        <a id="Qn176" className="reference" href="#Q176" value="Qn176">Q-176</a>&nbsp;&nbsp;
+        <a id="Qn177" className="reference" href="#Q177" value="Qn177">Q-177</a>&nbsp;&nbsp;
+        <a id="Qn178" className="reference" href="#Q178" value="Qn178">Q-178</a>&nbsp;&nbsp;
+        <a id="Qn179" className="reference" href="#Q179" value="Qn179">Q-179</a>&nbsp;&nbsp;
+        <a id="Qn180" className="reference" href="#Q180" value="Qn180">Q-180</a>&nbsp;&nbsp;<br><br>
+        <a id="Qn181" className="reference" href="#Q181" value="Qn181">Q-181</a>&nbsp;&nbsp;
+        <a id="Qn182" className="reference" href="#Q182" value="Qn182">Q-182</a>&nbsp;&nbsp;
+        <a id="Qn183" className="reference" href="#Q183" value="Qn183">Q-183</a>&nbsp;&nbsp;
+        <a id="Qn184" className="reference" href="#Q184" value="Qn184">Q-184</a>&nbsp;&nbsp;
+        <a id="Qn185" className="reference" href="#Q185" value="Qn185">Q-185</a>&nbsp;&nbsp;
+        <a id="Qn186" className="reference" href="#Q186" value="Qn186">Q-186</a>&nbsp;&nbsp;
+        <a id="Qn187" className="reference" href="#Q187" value="Qn187">Q-187</a>&nbsp;&nbsp;
+        <a id="Qn188" className="reference" href="#Q188" value="Qn188">Q-188</a>&nbsp;&nbsp;
+        <a id="Qn189" className="reference" href="#Q189" value="Qn189">Q-189</a>&nbsp;&nbsp;
+        <a id="Qn190" className="reference" href="#Q190" value="Qn190">Q-190</a>&nbsp;&nbsp;<br><br>
+        <a id="Qn191" className="reference" href="#Q191" value="Qn191">Q-191</a>&nbsp;&nbsp;
+        <a id="Qn192" className="reference" href="#Q192" value="Qn192">Q-192</a>&nbsp;&nbsp;
+        <a id="Qn193" className="reference" href="#Q193" value="Qn193">Q-193</a>&nbsp;&nbsp;
+        <a id="Qn194" className="reference" href="#Q194" value="Qn194">Q-194</a>&nbsp;&nbsp;
+        <a id="Qn195" className="reference" href="#Q195" value="Qn195">Q-195</a>&nbsp;&nbsp;
+        <a id="Qn196" className="reference" href="#Q196" value="Qn196">Q-196</a>&nbsp;&nbsp;
+        <a id="Qn197" className="reference" href="#Q197" value="Qn197">Q-197</a>&nbsp;&nbsp;
+        <a id="Qn198" className="reference" href="#Q198" value="Qn198">Q-198</a>&nbsp;&nbsp;
+        <a id="Qn199" className="reference" href="#Q199" value="Qn199">Q-199</a>&nbsp;&nbsp;
+        <a id="Qn200" className="reference" href="#Q200" value="Qn100">Q-200</a>&nbsp;&nbsp;
       </nav>
       <br><br><br><br><br><br>    
 
@@ -3735,68 +3761,86 @@
       <br><br>
 
       <nav>
-        <a id="Qnd151" className="reference" href="#Q151" value="Qn151">Q-151</a>
-        <a id="Qnd152" className="reference" href="#Q152" value="Qn152">Q-152</a>
-        <a id="Qnd153" className="reference" href="#Q153" value="Qn153">Q-153</a>
-        <a id="Qnd154" className="reference" href="#Q154" value="Qn154">Q-154</a>
-        <a id="Qnd155" className="reference" href="#Q155" value="Qn155">Q-155</a>
-        <a id="Qnd156" className="reference" href="#Q156" value="Qn156">Q-156</a>
-        <a id="Qnd157" className="reference" href="#Q157" value="Qn157">Q-157</a>
-        <a id="Qnd158" className="reference" href="#Q158" value="Qn158">Q-158</a>
-        <a id="Qnd159" className="reference" href="#Q159" value="Qn159">Q-159</a>
-        <a id="Qnd160" className="reference" href="#Q160" value="Qn160">Q-160</a><br>
-        <a id="Qnd161" className="reference" href="#Q161" value="Qn161">Q-161</a>
-        <a id="Qnd162" className="reference" href="#Q162" value="Qn162">Q-162</a>
-        <a id="Qnd163" className="reference" href="#Q163" value="Qn163">Q-163</a>
-        <a id="Qnd164" className="reference" href="#Q164" value="Qn164">Q-164</a>
-        <a id="Qnd165" className="reference" href="#Q165" value="Qn165">Q-165</a>
-        <a id="Qnd166" className="reference" href="#Q166" value="Qn166">Q-166</a>
-        <a id="Qnd167" className="reference" href="#Q167" value="Qn167">Q-167</a>
-        <a id="Qnd168" className="reference" href="#Q168" value="Qn168">Q-168</a>
-        <a id="Qnd169" className="reference" href="#Q169" value="Qn169">Q-169</a>
-        <a id="Qnd170" className="reference" href="#Q170" value="Qn170">Q-170</a><br>
-        <a id="Qnd171" className="reference" href="#Q171" value="Qn171">Q-171</a>
-        <a id="Qnd172" className="reference" href="#Q172" value="Qn172">Q-172</a>
-        <a id="Qnd173" className="reference" href="#Q173" value="Qn173">Q-173</a>
-        <a id="Qnd174" className="reference" href="#Q174" value="Qn174">Q-174</a>
-        <a id="Qnd175" className="reference" href="#Q175" value="Qn175">Q-175</a>
-        <a id="Qnd176" className="reference" href="#Q176" value="Qn176">Q-176</a>
-        <a id="Qnd177" className="reference" href="#Q177" value="Qn177">Q-177</a>
-        <a id="Qnd178" className="reference" href="#Q178" value="Qn178">Q-178</a>
-        <a id="Qnd179" className="reference" href="#Q179" value="Qn179">Q-179</a>
-        <a id="Qnd180" className="reference" href="#Q180" value="Qn180">Q-180</a><br>
-        <a id="Qnd181" className="reference" href="#Q181" value="Qn181">Q-181</a>
-        <a id="Qnd182" className="reference" href="#Q182" value="Qn182">Q-182</a>
-        <a id="Qnd183" className="reference" href="#Q183" value="Qn183">Q-183</a>
-        <a id="Qnd184" className="reference" href="#Q184" value="Qn184">Q-184</a>
-        <a id="Qnd185" className="reference" href="#Q185" value="Qn185">Q-185</a>
-        <a id="Qnd186" className="reference" href="#Q186" value="Qn186">Q-186</a>
-        <a id="Qnd187" className="reference" href="#Q187" value="Qn187">Q-187</a>
-        <a id="Qnd188" className="reference" href="#Q188" value="Qn188">Q-188</a>
-        <a id="Qnd189" className="reference" href="#Q189" value="Qn189">Q-189</a>
-        <a id="Qnd190" className="reference" href="#Q190" value="Qn140">Q-190</a><br>
-        <a id="Qnd191" className="reference" href="#Q191" value="Qn141">Q-191</a>
-        <a id="Qnd192" className="reference" href="#Q192" value="Qn142">Q-192</a>
-        <a id="Qnd193" className="reference" href="#Q193" value="Qn143">Q-193</a>
-        <a id="Qnd194" className="reference" href="#Q194" value="Qn144">Q-194</a>
-        <a id="Qnd195" className="reference" href="#Q195" value="Qn145">Q-195</a>
-        <a id="Qnd196" className="reference" href="#Q196" value="Qn146">Q-196</a>
-        <a id="Qnd197" className="reference" href="#Q197" value="Qn147">Q-197</a>
-        <a id="Qnd198" className="reference" href="#Q198" value="Qn148">Q-198</a>
-        <a id="Qnd199" className="reference" href="#Q199" value="Qn149">Q-199</a>
-        <a id="Qnd200" className="reference" href="#Q200" value="Qn200">Q-200</a>
+        <a id="Qnd151" className="reference" href="#Q151" value="Qn151">Q-151</a>&nbsp;&nbsp;
+        <a id="Qnd152" className="reference" href="#Q152" value="Qn152">Q-152</a>&nbsp;&nbsp;
+        <a id="Qnd153" className="reference" href="#Q153" value="Qn153">Q-153</a>&nbsp;&nbsp;
+        <a id="Qnd154" className="reference" href="#Q154" value="Qn154">Q-154</a>&nbsp;&nbsp;
+        <a id="Qnd155" className="reference" href="#Q155" value="Qn155">Q-155</a>&nbsp;&nbsp;
+        <a id="Qnd156" className="reference" href="#Q156" value="Qn156">Q-156</a>&nbsp;&nbsp;
+        <a id="Qnd157" className="reference" href="#Q157" value="Qn157">Q-157</a>&nbsp;&nbsp;
+        <a id="Qnd158" className="reference" href="#Q158" value="Qn158">Q-158</a>&nbsp;&nbsp;
+        <a id="Qnd159" className="reference" href="#Q159" value="Qn159">Q-159</a>&nbsp;&nbsp;
+        <a id="Qnd160" className="reference" href="#Q160" value="Qn160">Q-160</a>&nbsp;&nbsp;<br><br>
+        <a id="Qnd161" className="reference" href="#Q161" value="Qn161">Q-161</a>&nbsp;&nbsp;
+        <a id="Qnd162" className="reference" href="#Q162" value="Qn162">Q-162</a>&nbsp;&nbsp;
+        <a id="Qnd163" className="reference" href="#Q163" value="Qn163">Q-163</a>&nbsp;&nbsp;
+        <a id="Qnd164" className="reference" href="#Q164" value="Qn164">Q-164</a>&nbsp;&nbsp;
+        <a id="Qnd165" className="reference" href="#Q165" value="Qn165">Q-165</a>&nbsp;&nbsp;
+        <a id="Qnd166" className="reference" href="#Q166" value="Qn166">Q-166</a>&nbsp;&nbsp;
+        <a id="Qnd167" className="reference" href="#Q167" value="Qn167">Q-167</a>&nbsp;&nbsp;
+        <a id="Qnd168" className="reference" href="#Q168" value="Qn168">Q-168</a>&nbsp;&nbsp;
+        <a id="Qnd169" className="reference" href="#Q169" value="Qn169">Q-169</a>&nbsp;&nbsp;
+        <a id="Qnd170" className="reference" href="#Q170" value="Qn170">Q-170</a>&nbsp;&nbsp;<br><br>
+        <a id="Qnd171" className="reference" href="#Q171" value="Qn171">Q-171</a>&nbsp;&nbsp;
+        <a id="Qnd172" className="reference" href="#Q172" value="Qn172">Q-172</a>&nbsp;&nbsp;
+        <a id="Qnd173" className="reference" href="#Q173" value="Qn173">Q-173</a>&nbsp;&nbsp;
+        <a id="Qnd174" className="reference" href="#Q174" value="Qn174">Q-174</a>&nbsp;&nbsp;
+        <a id="Qnd175" className="reference" href="#Q175" value="Qn175">Q-175</a>&nbsp;&nbsp;
+        <a id="Qnd176" className="reference" href="#Q176" value="Qn176">Q-176</a>&nbsp;&nbsp;
+        <a id="Qnd177" className="reference" href="#Q177" value="Qn177">Q-177</a>&nbsp;&nbsp;
+        <a id="Qnd178" className="reference" href="#Q178" value="Qn178">Q-178</a>&nbsp;&nbsp;
+        <a id="Qnd179" className="reference" href="#Q179" value="Qn179">Q-179</a>&nbsp;&nbsp;
+        <a id="Qnd180" className="reference" href="#Q180" value="Qn180">Q-180</a>&nbsp;&nbsp;<br><br>
+        <a id="Qnd181" className="reference" href="#Q181" value="Qn181">Q-181</a>&nbsp;&nbsp;
+        <a id="Qnd182" className="reference" href="#Q182" value="Qn182">Q-182</a>&nbsp;&nbsp;
+        <a id="Qnd183" className="reference" href="#Q183" value="Qn183">Q-183</a>&nbsp;&nbsp;
+        <a id="Qnd184" className="reference" href="#Q184" value="Qn184">Q-184</a>&nbsp;&nbsp;
+        <a id="Qnd185" className="reference" href="#Q185" value="Qn185">Q-185</a>&nbsp;&nbsp;
+        <a id="Qnd186" className="reference" href="#Q186" value="Qn186">Q-186</a>&nbsp;&nbsp;
+        <a id="Qnd187" className="reference" href="#Q187" value="Qn187">Q-187</a>&nbsp;&nbsp;
+        <a id="Qnd188" className="reference" href="#Q188" value="Qn188">Q-188</a>&nbsp;&nbsp;
+        <a id="Qnd189" className="reference" href="#Q189" value="Qn189">Q-189</a>&nbsp;&nbsp;
+        <a id="Qnd190" className="reference" href="#Q190" value="Qn140">Q-190</a>&nbsp;&nbsp;<br><br>
+        <a id="Qnd191" className="reference" href="#Q191" value="Qn141">Q-191</a>&nbsp;&nbsp;
+        <a id="Qnd192" className="reference" href="#Q192" value="Qn142">Q-192</a>&nbsp;&nbsp;
+        <a id="Qnd193" className="reference" href="#Q193" value="Qn143">Q-193</a>&nbsp;&nbsp;
+        <a id="Qnd194" className="reference" href="#Q194" value="Qn144">Q-194</a>&nbsp;&nbsp;
+        <a id="Qnd195" className="reference" href="#Q195" value="Qn145">Q-195</a>&nbsp;&nbsp;
+        <a id="Qnd196" className="reference" href="#Q196" value="Qn146">Q-196</a>&nbsp;&nbsp;
+        <a id="Qnd197" className="reference" href="#Q197" value="Qn147">Q-197</a>&nbsp;&nbsp;
+        <a id="Qnd198" className="reference" href="#Q198" value="Qn148">Q-198</a>&nbsp;&nbsp;
+        <a id="Qnd199" className="reference" href="#Q199" value="Qn149">Q-199</a>&nbsp;&nbsp;
+        <a id="Qnd200" className="reference" href="#Q200" value="Qn200">Q-200</a>&nbsp;&nbsp;
       </nav>
       <br><br>
       <a href="#nbme">Block list</a>
       <br><br>
     </div>
 
-
+    <br><br>
     <h3>
       <button id="submit" onclick="Submit()" type="submit" value="Submit">Submit</button>
     </h3>
-    <br><br>  
+    <br><br>
+    <footer>
+      Copyright &copy; 2016 Sunny Bunny. All Rights Reserved.
+    </footer>
+    </b>
+    <br><br>
+
     <script>
+      function GenderCheck(gender)
+        {
+          if (gender.value == "Male" || gender.value == "Female" || gender.value == "Gay")
+          {
+            window.alert("Incorrect Gender!! Please select correct Gender")
+            gender.checked = false;
+          }
+          else
+          {
+            window.alert("True that!!")
+          }
+        }
       function Mark(elmnt)
         {
           var x = elmnt;
@@ -3821,9 +3865,12 @@
         }
       function Submit()
         {
+          var name_select = document.getElementById("name_select")
+          name = name_select.options[name_select.selectedIndex].value
           var answers = ["1B","2A","3E","4D","5F","6E","7B","8B","9C","10D","11B","12B","13A","14F","15E","16B","17A","18D","19A","20A","21A","22A","23A","24E","25A","26C","27E","28C","29A","30C","31A","32F","33B","34B","35C","36E","37A","38D","39A","40D","41D","42E","43D","44C","45C","46C","47E","48G","49D","50F","51E","52B","53A","54A","55A","56C","57E","58E","59F","60C","61C","62B","63D","64B","65D","66D","67C","68C","69E","70F","71A","72A","73C","74E","75C","76E","77D","78E","79E","80B","81C","82A","83A","84D","85D","86E","87B","88D","89D","90C","91A","92D","93D","94C","95D","96A","97D","98F","99B","100C","101E","102C","103A","104E","105E","106B","107B","108C","109D","110C","111B","112A","113E","114B","115A","116C","117A","118C","119C","120D","121D","122E","123E","124D","125B","126C","127C","128E","129F","130B","131B","132A","133D","134D","135C","136C","137D","138D","139B","140A","141A","142A","143D","144B","145B","146A","147A","148D","149D","150A","151A","152A","153E","154D","155E","156B","157D","158E","159C","160B","161D","162A","163D","164C","165C","166A","167C","168B","169E","170E","171C","172A","173D","174A","175B","176D","177D","178A","179C","180C","181C","182E","183C","184B","185C","186C","187A","188D","189A","190C","191D","192D","193D","194D","195B","196D","197D","198C","199A","200F"]
           var score = 0
           var correct_answers = ""
+          var incorrect_count = 0
           for(i = 0; i < answers.length; i++)
             {
               var id = answers[i]
@@ -3832,18 +3879,27 @@
                   score += 1;
                 }
               else
-                {
-                  correct_answers = correct_answers + answers[i] + " "
+                { 
+                  incorrect_count += 1;
+                  if (incorrect_count%10 == 0)
+                    {
+                      correct_answers = correct_answers + answers[i] + "\n"
+                    }
+                  else
+                    {
+                      correct_answers = correct_answers + answers[i] + "   "
+                    };
                 }
 
             }
-          if (correct_answers == "")
+          var message_template = "Hello " + name + "!!\n\nYour score is " + score + "/" + answers.length + "\n\n "
+          if (incorrect_count < 20)
             {
-              message = "Your score is " + score + "/" + answers.length + "\n You did a great job"
+              message = message_template + "You did a great job\n\nCorrect answers are \n\n" + correct_answers
             }
           else
             {
-              message = "Your score is " + score + "/" + answers.length + "\n Correct answers are \n" + correct_answers 
+              message = message_template + "Correct answers are \n\n" + correct_answers 
             }
           
           window.alert(message);
