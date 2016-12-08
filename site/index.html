@@ -4,7 +4,7 @@
   	<meta charset="utf-8">
   	<title>NBME 12</title>
     <style>
-      div.start{
+      div.Start{
             background-color: lightgrey;
         }
       div.block1{
@@ -26,9 +26,12 @@
       .Question, #submit, .Info {
           font-size: 20px;
         }
-      /*img {
-          align: right;
-        }*/
+      .Info {
+          font-weight: bold;
+        }
+      nav {
+          text-align: center;
+        }
       .Blocks {
           font-size: 25px;
         }  
@@ -36,7 +39,8 @@
           color: blue;
           font-size: 20px;
         }
-      option {
+      .NameSelect {
+              font-size: 20px;
               color: #FF33D1;
         }
       h3, h1{
@@ -44,21 +48,26 @@
         }
       .mark, .Name {
                  font-size: 15px; 
-        }
+          }
       marquee {
           font-size: 30px;
+          font-style: italic;
           color: #FF33D1;
         }
       span {
           color: red;
           text-decoration: underline; 
         }
+      body {
+          font-family: "Comic Sans MS";
+        }
     </style>
     <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
   </head>
 
   <body>
-    <div class="start">
+    <div class="Start">
+    <br>
     <h1 id="nbme" style="color:#CE33FF";>
       NBME 12
     </h1>
@@ -69,7 +78,7 @@
       <p id="name" class="Info">
         Please select your name
       </p>
-      <select id="name_select" style="font-size: 20px;" style="color: #FF33D1;">
+      <select id="name_select" class="NameSelect">
         <option class="Name" value="Bunny">Bunny</option>
         <option class="Name" value="Cutie Pie">Cutie Pie</option>
         <option class="Name" value="Debby">Debby</option>
@@ -91,7 +100,7 @@
     <ol>
       <li>There are <u>four</u> blocks containing <u>50</u> questions each(a total of 200 <i class="em em-unamused"></i><i class="em em-unamused"></i>).</li>
       <li>Time allotted for each block is <u>60</u> mins(Please carry a timer <i class="em em-grimacing"></i><i class="em em-grimacing"></i>).</li>
-      <li>Each block has question navigator(only the questions in that particular block) at the beginning and end of the block.</li>
+      <li>Each block has question navigators(only the questions in that particular block) at the beginning and end of the block.</li>
       <li>You can go to question navigator(of a particular block) from any question by clicking the <u>Block X questions list</u> (X=1,2,3,4).</li>
       <li>There is a block navigator at the end of each block</li>
       <li>All marked questions are highlighted with red text in the question navigator (Ex:-<u>Q24</u> <span>Q25</span> <u>Q26</u> <u>Q27</u> <span>Q28</span> Here questions 25 and 28 are marked for review).</li>
@@ -106,17 +115,17 @@
     <br><br>
     <b>
     <nav>
-      <a id="block1" class="Blocks" href="#Block1" value="block1">Block 1</a><br><br>
-      <a id="block2" class="Blocks" href="#Block2" value="block2">Block 2</a><br><br>
-      <a id="block3" class="Blocks" href="#Block3" value="block3">Block 3</a><br><br>
-      <a id="block4" class="Blocks" href="#Block4" value="block4">Block 4</a><br><br>
+      <a id="block1" class="Blocks" href="#Block1" value="block1">Block 1</a><br><br><br>
+      <a id="block2" class="Blocks" href="#Block2" value="block2">Block 2</a><br><br><br>
+      <a id="block3" class="Blocks" href="#Block3" value="block3">Block 3</a><br><br><br>
+      <a id="block4" class="Blocks" href="#Block4" value="block4">Block 4</a><br><br><br>
     </nav>
     <br><br>
   </div>
 
     <div class="block1">
-    <h1 id="Block1">BLOCK 1</h1>
-    <br>
+    <br><br>
+    <h1 id="Block1">BLOCK 1</h1><br><br>
     <nav class="QuestionNavigation">
       <a id="Qn1" className="reference" href="#Q1" value="Qn1">Q-01</a>&nbsp;&nbsp;
       <a id="Qn2" className="reference" href="#Q2" value="Qn2">Q-02</a>&nbsp;&nbsp;
@@ -996,7 +1005,7 @@
     <br><br>
 
 
-    <nav>
+    <nav class="QuestionNavigation">
       <a id="Qnd1" className="reference" href="#Q1" value="Qn1">Q-01</a>&nbsp;&nbsp;
       <a id="Qnd2" className="reference" href="#Q2" value="Qn2">Q-02</a>&nbsp;&nbsp;
       <a id="Qnd3" className="reference" href="#Q3" value="Qn3">Q-03</a>&nbsp;&nbsp;
@@ -1054,7 +1063,8 @@
     </div>
 
     <div class="block2">
-      <h1 id="Block2">BLOCK 2</h1>
+      <br><br>
+      <h1 id="Block2">BLOCK 2</h1><br><br>
       <nav class="QuestionNavigation">
         <a id="Qn51" className="reference" href="#Q51" value="Qn51">Q-51</a>&nbsp;&nbsp;
         <a id="Qn52" className="reference" href="#Q52" value="Qn52">Q-52</a>&nbsp;&nbsp;
@@ -1065,7 +1075,7 @@
         <a id="Qn57" className="reference" href="#Q57" value="Qn57">Q-57</a>&nbsp;&nbsp;
         <a id="Qn58" className="reference" href="#Q58" value="Qn58">Q-58</a>&nbsp;&nbsp;
         <a id="Qn59" className="reference" href="#Q59" value="Qn59">Q-59</a>&nbsp;&nbsp;
-        <a id="Qn60" className="reference" href="#Q60" value="Qn60">Q-60</a><br><br>&nbsp;&nbsp;
+        <a id="Qn60" className="reference" href="#Q60" value="Qn60">Q-60</a>&nbsp;&nbsp;<br><br>
         <a id="Qn61" className="reference" href="#Q61" value="Qn61">Q-61</a>&nbsp;&nbsp;
         <a id="Qn62" className="reference" href="#Q62" value="Qn62">Q-62</a>&nbsp;&nbsp;
         <a id="Qn63" className="reference" href="#Q63" value="Qn63">Q-63</a>&nbsp;&nbsp;
@@ -1075,7 +1085,7 @@
         <a id="Qn67" className="reference" href="#Q67" value="Qn67">Q-67</a>&nbsp;&nbsp;
         <a id="Qn68" className="reference" href="#Q68" value="Qn68">Q-68</a>&nbsp;&nbsp;
         <a id="Qn69" className="reference" href="#Q69" value="Qn69">Q-69</a>&nbsp;&nbsp;
-        <a id="Qn70" className="reference" href="#Q70" value="Qn70">Q-70</a><br><br>&nbsp;&nbsp;
+        <a id="Qn70" className="reference" href="#Q70" value="Qn70">Q-70</a>&nbsp;&nbsp;<br><br>
         <a id="Qn71" className="reference" href="#Q71" value="Qn71">Q-71</a>&nbsp;&nbsp;
         <a id="Qn72" className="reference" href="#Q72" value="Qn72">Q-72</a>&nbsp;&nbsp;
         <a id="Qn73" className="reference" href="#Q73" value="Qn73">Q-73</a>&nbsp;&nbsp;
@@ -1085,7 +1095,7 @@
         <a id="Qn77" className="reference" href="#Q77" value="Qn77">Q-77</a>&nbsp;&nbsp;
         <a id="Qn78" className="reference" href="#Q78" value="Qn78">Q-78</a>&nbsp;&nbsp;
         <a id="Qn79" className="reference" href="#Q79" value="Qn79">Q-79</a>&nbsp;&nbsp;
-        <a id="Qn80" className="reference" href="#Q80" value="Qn80">Q-80</a><br><br>&nbsp;&nbsp;
+        <a id="Qn80" className="reference" href="#Q80" value="Qn80">Q-80</a>&nbsp;&nbsp;<br><br>
         <a id="Qn81" className="reference" href="#Q81" value="Qn81">Q-81</a>&nbsp;&nbsp;
         <a id="Qn82" className="reference" href="#Q82" value="Qn82">Q-82</a>&nbsp;&nbsp;
         <a id="Qn83" className="reference" href="#Q83" value="Qn83">Q-83</a>&nbsp;&nbsp;
@@ -1095,7 +1105,7 @@
         <a id="Qn87" className="reference" href="#Q87" value="Qn87">Q-87</a>&nbsp;&nbsp;
         <a id="Qn88" className="reference" href="#Q88" value="Qn88">Q-88</a>&nbsp;&nbsp;
         <a id="Qn89" className="reference" href="#Q89" value="Qn89">Q-89</a>&nbsp;&nbsp;
-        <a id="Qn90" className="reference" href="#Q90" value="Qn90">Q-90</a><br><br>&nbsp;&nbsp;
+        <a id="Qn90" className="reference" href="#Q90" value="Qn90">Q-90</a>&nbsp;&nbsp;<br><br>
         <a id="Qn91" className="reference" href="#Q91" value="Qn91">Q-91</a>&nbsp;&nbsp;
         <a id="Qn92" className="reference" href="#Q92" value="Qn92">Q-92</a>&nbsp;&nbsp;
         <a id="Qn93" className="reference" href="#Q93" value="Qn93">Q-93</a>&nbsp;&nbsp;
@@ -1921,7 +1931,7 @@
       </div>
       <br><br>
 
-      <nav>
+      <nav class="QuestionNavigation">
         <a id="Qnd51" className="reference" href="#Q51" value="Qn51">Q-51</a>&nbsp;&nbsp;
         <a id="Qnd52" className="reference" href="#Q52" value="Qn52">Q-52</a>&nbsp;&nbsp;
         <a id="Qnd53" className="reference" href="#Q53" value="Qn53">Q-53</a>&nbsp;&nbsp;
@@ -1979,8 +1989,8 @@
     </div>
 
     <div class="block3">
-      <h1 id="Block3">BLOCK 3</h1>
-      <br>
+      <br><br>
+      <h1 id="Block3">BLOCK 3</h1><br><br>
       <nav class="QuestionNavigation">
         <a id="Qn101" className="reference" href="#Q101" value="Qn101">Q-101</a>&nbsp;&nbsp;
         <a id="Qn102" className="reference" href="#Q102" value="Qn102">Q-102</a>&nbsp;&nbsp;
@@ -1991,7 +2001,7 @@
         <a id="Qn107" className="reference" href="#Q107" value="Qn107">Q-107</a>&nbsp;&nbsp;
         <a id="Qn108" className="reference" href="#Q108" value="Qn108">Q-108</a>&nbsp;&nbsp;
         <a id="Qn109" className="reference" href="#Q109" value="Qn109">Q-109</a>&nbsp;&nbsp;
-        <a id="Qn110" className="reference" href="#Q110" value="Qn110">Q-110</a><br><br>&nbsp;&nbsp;
+        <a id="Qn110" className="reference" href="#Q110" value="Qn110">Q-110</a>&nbsp;&nbsp;<br><br>
         <a id="Qn111" className="reference" href="#Q111" value="Qn111">Q-111</a>&nbsp;&nbsp;
         <a id="Qn112" className="reference" href="#Q112" value="Qn112">Q-112</a>&nbsp;&nbsp;
         <a id="Qn113" className="reference" href="#Q113" value="Qn113">Q-113</a>&nbsp;&nbsp;
@@ -2001,7 +2011,7 @@
         <a id="Qn117" className="reference" href="#Q117" value="Qn117">Q-117</a>&nbsp;&nbsp;
         <a id="Qn118" className="reference" href="#Q118" value="Qn118">Q-118</a>&nbsp;&nbsp;
         <a id="Qn119" className="reference" href="#Q119" value="Qn119">Q-119</a>&nbsp;&nbsp;
-        <a id="Qn120" className="reference" href="#Q120" value="Qn120">Q-120</a><br><br>&nbsp;&nbsp;
+        <a id="Qn120" className="reference" href="#Q120" value="Qn120">Q-120</a>&nbsp;&nbsp;<br><br>
         <a id="Qn121" className="reference" href="#Q121" value="Qn121">Q-121</a>&nbsp;&nbsp;
         <a id="Qn122" className="reference" href="#Q122" value="Qn122">Q-122</a>&nbsp;&nbsp;
         <a id="Qn123" className="reference" href="#Q123" value="Qn123">Q-123</a>&nbsp;&nbsp;
@@ -2011,7 +2021,7 @@
         <a id="Qn127" className="reference" href="#Q127" value="Qn127">Q-127</a>&nbsp;&nbsp;
         <a id="Qn128" className="reference" href="#Q128" value="Qn128">Q-128</a>&nbsp;&nbsp;
         <a id="Qn129" className="reference" href="#Q129" value="Qn129">Q-129</a>&nbsp;&nbsp;
-        <a id="Qn130" className="reference" href="#Q130" value="Qn130">Q-130</a><br><br>&nbsp;&nbsp;
+        <a id="Qn130" className="reference" href="#Q130" value="Qn130">Q-130</a>&nbsp;&nbsp;<br><br>
         <a id="Qn131" className="reference" href="#Q131" value="Qn131">Q-131</a>&nbsp;&nbsp;
         <a id="Qn132" className="reference" href="#Q132" value="Qn132">Q-132</a>&nbsp;&nbsp;
         <a id="Qn133" className="reference" href="#Q133" value="Qn133">Q-133</a>&nbsp;&nbsp;
@@ -2021,7 +2031,7 @@
         <a id="Qn137" className="reference" href="#Q137" value="Qn137">Q-137</a>&nbsp;&nbsp;
         <a id="Qn138" className="reference" href="#Q138" value="Qn138">Q-138</a>&nbsp;&nbsp;
         <a id="Qn139" className="reference" href="#Q139" value="Qn139">Q-139</a>&nbsp;&nbsp;
-        <a id="Qn140" className="reference" href="#Q140" value="Qn140">Q-140</a><br><br>&nbsp;&nbsp;
+        <a id="Qn140" className="reference" href="#Q140" value="Qn140">Q-140</a>&nbsp;&nbsp;<br><br>
         <a id="Qn141" className="reference" href="#Q141" value="Qn141">Q-141</a>&nbsp;&nbsp;
         <a id="Qn142" className="reference" href="#Q142" value="Qn142">Q-142</a>&nbsp;&nbsp;
         <a id="Qn143" className="reference" href="#Q143" value="Qn143">Q-143</a>&nbsp;&nbsp;
@@ -2843,7 +2853,7 @@
       <br><br>
 
 
-      <nav>
+      <nav class="QuestionNavigation">
         <a id="Qnd101" className="reference" href="#Q101" value="Qn101">Q-101</a>&nbsp;&nbsp;
         <a id="Qnd102" className="reference" href="#Q102" value="Qn102">Q-102</a>&nbsp;&nbsp;
         <a id="Qnd103" className="reference" href="#Q103" value="Qn103">Q-103</a>&nbsp;&nbsp;
@@ -2901,7 +2911,8 @@
     </div>
 
     <div class="block4">
-      <h1 id="Block4">BLOCK 4</h1>
+      <br><br>
+      <h1 id="Block4">BLOCK 4</h1><br><br>
       <nav class="QuestionNavigation">
         <a id="Qn151" className="reference" href="#Q151" value="Qn151">Q-151</a>&nbsp;&nbsp;
         <a id="Qn152" className="reference" href="#Q152" value="Qn152">Q-152</a>&nbsp;&nbsp;
@@ -3760,7 +3771,7 @@
       </div>
       <br><br>
 
-      <nav>
+      <nav class="QuestionNavigation">
         <a id="Qnd151" className="reference" href="#Q151" value="Qn151">Q-151</a>&nbsp;&nbsp;
         <a id="Qnd152" className="reference" href="#Q152" value="Qn152">Q-152</a>&nbsp;&nbsp;
         <a id="Qnd153" className="reference" href="#Q153" value="Qn153">Q-153</a>&nbsp;&nbsp;
